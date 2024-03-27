@@ -18,25 +18,32 @@ async function main() {
   }
 
   // TODO: 
+  // Delete keys in our locale that are no longer in our base.json
+
+  // Refactor to take multiple languages
+  // Set up env variables so we can use those to set langs, rather than hardcoding
+
   // Look into rosey check
-  // Need to check behaviour if the key has changed, or if it is no longer in the base.json file
-  // Set up env variables so we can use those to set which languages locale files are created
   for (const inputKey in inputFile) {
-    const translationEntry = inputFile[inputKey];
-    // console.log('inputFile', translationEntry);
+    const inputTranslationObj = inputFile[inputKey];
+    // console.log('inputFile', inputTranslationObj);
     if (outputFileData[inputKey] === undefined) {
       outputFileData[inputKey] = {
-        original: translationEntry['original'],
-        value: translationEntry.value,
+        original: inputTranslationObj['original'],
+        value: inputTranslationObj.value,
       };
     }
     for (const outputKey in outputFileData) {
-      // console.log('outputFileData', outputFileData[outputKey]);
-      if (outputKey === inputKey && outputFileData[outputKey].value === null) {
+      const outputTranslationObj = outputFileData[outputKey];
+      // console.log('outputFileData', outputTranslationObj);
+      if (outputKey === inputKey && outputTranslationObj.value === null) {
         outputFileData[inputKey] = {
           original: translationEntry['original'],
           value: translationEntry.value,
         };
+      }
+      if (inputFile[outputKey] === undefined) {
+        delete outputFileData[outputKey];
       }
     }
   }
