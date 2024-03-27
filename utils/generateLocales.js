@@ -1,7 +1,9 @@
 const fs = require('file-system');
 
 let inputFile = './rosey/base.json';
-let outputFile = './rosey/locales/fr-fr.json';
+let localesDirPath = './rosey/locales';
+let locale = 'fr-fr.json';
+let localePath = localesDirPath + '/' + locale;
 let outputFileData = {};
 
 async function main() {
@@ -10,40 +12,48 @@ async function main() {
   } else {
     console.log('rosey/base.json does not exist');
   }
-  if (fs.existsSync(outputFile)) {
-    outputFileData = JSON.parse(fs.readFileSync(outputFile));
+  if (fs.existsSync(localePath)) {
+    outputFileData = JSON.parse(fs.readFileSync(localePath));
   } else {
     console.log('rosey/locales/fr-fr.json does not exist, creating one now');
-    fs.writeFileSync(outputFile, JSON.stringify({}));
+    fs.writeFileSync(localePath, JSON.stringify({}));
   }
 
   // TODO: 
+  // Refactor to take multiple languages
+  // Set up env variables so we can use those to set langs, rather than hardcoding
+
   // Look into rosey check
-  // Need to check behaviour if the key has changed, or if it is no longer in the base.json file
-  // Set up env variables so we can use those to set which languages locale files are created
   for (const inputKey in inputFile) {
-    const translationEntry = inputFile[inputKey];
-    // console.log('inputFile', translationEntry);
+    const inputTranslationObj = inputFile[inputKey];
+    // If key doesn't exist in our output file, add it
     if (outputFileData[inputKey] === undefined) {
       outputFileData[inputKey] = {
-        original: translationEntry['original'],
-        value: translationEntry.value,
+        original: inputTranslationObj['original'],
+        value: inputTranslationObj.value,
       };
     }
     for (const outputKey in outputFileData) {
-      // console.log('outputFileData', outputFileData[outputKey]);
-      if (outputKey === inputKey && outputFileData[outputKey].value === null) {
+      const outputTranslationObj = outputFileData[outputKey];
+      // If key exists in both files, and doesn't already have a translation value update the value.
+      // If key exists in both files, and already has a translation value, do nothing.
+      if (outputKey === inputKey && outputTranslationObj.value === null) {
         outputFileData[inputKey] = {
-          original: translationEntry['original'],
-          value: translationEntry.value,
+          original: inputTranslationObj['original'],
+          value: inputTranslationObj.value,
         };
+      }
+      // If key no longer exists in our base.json, delete it from our locale
+      if (inputFile[outputKey] === undefined) {
+        console.log(`Deleting key: ${outputKey} from translations, as it is no longer found on the site.`)
+        delete outputFileData[outputKey];
       }
     }
   }
 
-  fs.writeFile(outputFile, JSON.stringify(outputFileData), (err) => {
+  fs.writeFile(localePath, JSON.stringify(outputFileData), (err) => {
     if (err) throw err;
-    console.log(outputFile + ' updated succesfully');
+    console.log(localePath + ' updated succesfully');
   });
 }
 
