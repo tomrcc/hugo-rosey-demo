@@ -66,7 +66,7 @@ content_blocks:
   - _bookshop_name: left-right
     bg_image:
     heading: Another Left Right
-    text: ''
+    text: Some text
     button:
     image:
     image_alt:
