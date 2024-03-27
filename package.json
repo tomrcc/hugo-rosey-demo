@@ -33,6 +33,7 @@
     "file-system": "^2.2.2",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
-    "postcss-import": "^16.0.1"
+    "postcss-import": "^16.0.1",
+    "rosey": "^2.0.5"
   }
 }

@@ -20,6 +20,8 @@ collections_config:
     parse_branch_index: true
     description: ''
     icon: notes
+    _enabled_editors:
+      - visual
     _editables:
     _inputs:
     _select_data:
@@ -59,8 +61,6 @@ _editables:
     # allow_custom_markup: true
     # remove_custom_markup: false
 data_config: {}
-editor:
-  default_path:
 source_editor:
   tab_size: 2
   theme: monokai

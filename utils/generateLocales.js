@@ -23,7 +23,7 @@ async function main() {
   // Set up env variables so we can use those to set which languages locale files are created
   for (const inputKey in inputFile) {
     const translationEntry = inputFile[inputKey];
-    console.log('inputFile', translationEntry);
+    // console.log('inputFile', translationEntry);
     if (outputFileData[inputKey] === undefined) {
       outputFileData[inputKey] = {
         original: translationEntry['original'],
@@ -31,7 +31,7 @@ async function main() {
       };
     }
     for (const outputKey in outputFileData) {
-      console.log('outputFileData', outputFileData[outputKey]);
+      // console.log('outputFileData', outputFileData[outputKey]);
       if (outputKey === inputKey && outputFileData[outputKey].value === null) {
         outputFileData[inputKey] = {
           original: translationEntry['original'],
