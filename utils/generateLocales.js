@@ -17,11 +17,9 @@ async function main() {
     fs.writeFileSync(outputFile, JSON.stringify({}));
   }
 
-  // TODO: Check if the original already has a translation, as we don't want to overwrite everytime.
-  // Only write it to the object if it doesn't exist with a translation already.
+  // TODO: 
   // Look into rosey check
-  // Set up CloudCannon so that we have a UI to enter translations manually
-  // Check Rosey uses the locale file to generate the translated version properly, with values we have set in the data editor
+  // Need to check behaviour if the key has changed, or if it is no longer in the base.json file
   // Set up env variables so we can use those to set which languages locale files are created
   for (const inputKey in inputFile) {
     const translationEntry = inputFile[inputKey];
