@@ -1,6 +1,14 @@
 {
   "version": 2,
   "keys": {
+    "Another Left Right": {
+      "original": "Another Left Right",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "Diff heading, prob would err if it was the same": {
       "original": "Diff heading, prob would err if it was the same",
       "value": null,
