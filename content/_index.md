@@ -63,14 +63,21 @@ content_blocks:
       button_color: '#c7588e'
     image: /images/transparent-bg/undraw-hello.svg
     image_alt:
+  - _bookshop_name: left-right
+    bg_image:
+    heading: Another Left Right
+    text: ''
+    button:
+    image:
+    image_alt:
 ---
 Some text
 
 A new paragraph
- A linebreak
- Another linebreak
+A linebreak
+Another linebreak
 
 Another new paragraph
- A linebreak added in the content editor with hardwraps on
- Another linebreak added with hardwraps on
+A linebreak added in the content editor with hardwraps on
+Another linebreak added with hardwraps on
 A linebreak added with hardwraps off
