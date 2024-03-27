@@ -1,6 +1,14 @@
 {
   "version": 2,
   "keys": {
+    "Diff heading, prob would err if it was the same": {
+      "original": "Diff heading, prob would err if it was the same",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "Keep what you need. Delete the rest.": {
       "original": "Keep what you need. Delete the rest.",
       "value": null,
