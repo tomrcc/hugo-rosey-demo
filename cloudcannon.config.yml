@@ -50,6 +50,16 @@ collections_config:
     icon: notes
     _editables:
     _inputs:
+      original:
+        type: textarea
+        label: Original
+        comment: This is the original value. Enter a translation in the box marked 'Translation' below.
+        options:
+          disabled: true
+      value:
+        type: textarea
+        label: Translation
+        comment: Enter a translation for the text above.
     _select_data:
     _structures:
     disable_add: false

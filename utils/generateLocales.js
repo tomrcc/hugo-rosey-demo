@@ -21,8 +21,8 @@ async function main(locale) {
 
   // TODO: 
   // Set up env variables so we can use those to set langs, rather than hardcoding
-
-  // Look into rosey check
+  // Test the case where a key already exists in the locale file, but is present multiple times in the base.json
+    // Could be a problem if we have a 'read more' button that is used in multiple places, but we only want to translate it once
   for (const inputKey in inputFile) {
     const inputTranslationObj = inputFile[inputKey];
     // If key doesn't exist in our output file, add it

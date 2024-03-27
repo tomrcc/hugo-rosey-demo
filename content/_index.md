@@ -1,5 +1,5 @@
 ---
-title:
+title: Home
 seo:
   page_description: >-
     We believe that a good email marketing strategy is the key to growth. So
@@ -14,42 +14,32 @@ seo:
 content_blocks:
   - _bookshop_name: hero
     bg_image: /images/backgrounds/textures/home-web.svg
-    heading: This heading changed
+    heading: Hugo Rosey Demo
     text: >-
-      A starter template for Hugo, Tailwind and Bookshop. Comes with a blog
-      section that includes pagination and tags. This template is set up so you
-      can just start building.<br>This is a linebreak<br>And another one
+      A demonstration of how Hugo and Rosey work in CloudCannon. This site has
+      extra setup so that we can enter translations via the CloudCannon GUI.
+      Additional languages can be set in the environment variables in
+      CloudCannon's build configuration.
     button:
       _bookshop_name: global/button
-      path: /
-      button_text: Discover Enterprise Solutions
-      button_text_color: '#181512'
-      button_color: '#f8b148'
+      path: https://rosey.app/
+      button_text: Read More
+      button_text_color: '#ffffff'
+      button_color: '#034ad8'
   - _bookshop_name: left-right
     bg_image: /images/backgrounds/textures/home-waves.svg
     heading: Keep what you need. Delete the rest.
     text: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      Make your own copy of this repository. Reference it or use it as a
+      template to get up and running with translation workflows in CloudCannon
+      using Rosey.
     button:
       _bookshop_name: global/button
-      path: /
-      button_text: Read Analysis
-      button_text_color: '#fff'
-      button_color: '#c7588e'
+      path: https://github.com/tomrcc/hugo-rosey-demo
+      button_text: Read More
+      button_text_color: '#ffffff'
+      button_color: '#034ad8'
     image: /images/transparent-bg/undraw-hello.svg
-    image_alt:
-  - _bookshop_name: left-right
-    bg_image:
-    heading: Testing another heading post refactor
-    text: ''
-    button:
-    image:
     image_alt:
 ---
 Some content

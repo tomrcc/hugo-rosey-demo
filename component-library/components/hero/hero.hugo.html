@@ -5,8 +5,12 @@
       <img class="{{ $c }}__svg-img" src={{ .bg_image }} alt="" />
    {{ end }}
    <div class="{{ $c }}__wrapper">
-      <h1 data-rosey="{{ .heading }}">{{ .heading }}</h1>
-      <p>{{ .text | markdownify }}</p>
+      {{ with .heading }}
+      <h1 data-rosey="{{ . }}">{{ . }}</h1>
+      {{ end }}
+      {{ with .text }}
+         <p data-rosey="{{ . | truncate 50 }}">{{ . | markdownify }}</p>
+      {{ end }}
       {{ with .button }}
          {{ partial "bookshop" . }}
       {{ end }}
