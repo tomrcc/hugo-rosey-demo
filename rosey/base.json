@@ -33,6 +33,14 @@
       },
       "total": 1
     },
+    "This one won't work": {
+      "original": "This one won't work",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "site-title": {
       "original": "Hugo Rosey Demo",
       "value": null,
