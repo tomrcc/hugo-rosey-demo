@@ -4,3 +4,4 @@ npm i
 npx "@bookshop/generate"
 npx rosey generate --source public
 node utils/generateLocales.js
+npx rosey build --source public
