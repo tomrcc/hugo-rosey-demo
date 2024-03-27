@@ -1,6 +1,14 @@
 {
   "version": 2,
   "keys": {
+    "Keep what you need. Delete the rest.": {
+      "original": "Keep what you need. Delete the rest.",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "This heading changed": {
       "original": "This heading changed",
       "value": null,
@@ -13,9 +21,11 @@
       "original": "Hugo Rosey Demo",
       "value": null,
       "pages": {
-        "index.html": 1
+        "categories/index.html": 1,
+        "index.html": 1,
+        "tags/index.html": 1
       },
-      "total": 1
+      "total": 3
     }
   }
 }

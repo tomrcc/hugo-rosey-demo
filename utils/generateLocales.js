@@ -26,13 +26,21 @@ async function main() {
   for (const inputKey in inputFile) {
     const translationEntry = inputFile[inputKey];
     console.log('inputFile', translationEntry);
-    outputFileData[inputKey] = {
-      original: translationEntry['original'],
-      translation: translationEntry.value,
-    };
-    // for (const outputKey in outputFileData) {
-    //   console.log('outputFileData', outputFileData[outputKey]);
-    // }
+    if (outputFileData[inputKey] === undefined) {
+      outputFileData[inputKey] = {
+        original: translationEntry['original'],
+        value: translationEntry.value,
+      };
+    }
+    for (const outputKey in outputFileData) {
+      console.log('outputFileData', outputFileData[outputKey]);
+      if (outputKey === inputKey && outputFileData[outputKey].value === null) {
+        outputFileData[inputKey] = {
+          original: translationEntry['original'],
+          value: translationEntry.value,
+        };
+      }
+    }
   }
 
   fs.writeFile(outputFile, JSON.stringify(outputFileData), (err) => {
