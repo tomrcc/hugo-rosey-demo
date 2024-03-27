@@ -1,6 +1,6 @@
 baseURL: 'http://example.org/'
 languageCode: en-us
-title: Hugo Bookshop Starter
+title: Hugo Rosey Demo
 module:
   replacements: local/component-library -> ../component-library
   imports:

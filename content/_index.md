@@ -14,7 +14,7 @@ seo:
 content_blocks:
   - _bookshop_name: hero
     bg_image: /images/backgrounds/textures/home-web.svg
-    heading: Hugo Starter Template
+    heading: This heading changed
     text: >-
       A starter template for Hugo, Tailwind and Bookshop. Comes with a blog
       section that includes pagination and tags. This template is set up so you

@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "keys": {
+    "This heading changed": {
+      "original": "This heading changed",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "site-title": {
+      "original": "Hugo Rosey Demo",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    }
+  }
+}
