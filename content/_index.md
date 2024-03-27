@@ -42,7 +42,3 @@ content_blocks:
     image: /images/transparent-bg/undraw-hello.svg
     image_alt:
 ---
-Some content
-
-A new paragraph
-A new line
