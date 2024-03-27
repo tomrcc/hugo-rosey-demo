@@ -6,7 +6,7 @@
    {{ end }}
    <div class="{{ $c }}__wrapper">
       <h1 data-rosey="{{ .heading }}">{{ .heading }}</h1>
-      <p data-rosey="{{ .text | markdownify }}">{{ .text | markdownify }}</p>
+      <p data-rosey="{{ .text | truncate 20}}">{{ .text | markdownify }}</p>
       {{ with .button }}
          {{ partial "bookshop" . }}
       {{ end }}
