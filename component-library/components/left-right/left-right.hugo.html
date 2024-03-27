@@ -6,9 +6,11 @@
    {{ end }}
    <div class="{{ $c }}__wrapper">
       <div class="{{ $c }}__text">
-         <h2 data-rosey="{{ .heading }}">{{ .heading }}</h2>
+         {{ with .heading }}
+            <h2 data-rosey="{{ . }}">{{ . }}</h2>
+         {{ end }}
          {{ with .text }}
-            <p data-rosey="{{ . | truncate 20}}">{{ . }}</p>
+            <p data-rosey="{{ . | truncate 50}}">{{ . }}</p>
          {{ end }}
          {{ with .button }}
             {{ partial "bookshop" . }}

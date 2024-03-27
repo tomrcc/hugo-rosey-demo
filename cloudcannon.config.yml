@@ -54,6 +54,7 @@ collections_config:
         type: textarea
         label: Original
         comment: This is the original value. Enter a translation in the box marked 'Translation' below.
+        disabled: true
       value:
         type: textarea
         label: Translation
