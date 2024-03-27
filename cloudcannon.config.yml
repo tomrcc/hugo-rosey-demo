@@ -51,9 +51,11 @@ collections_config:
     _editables:
     _inputs:
       original:
-        type: disabled
+        type: textarea
         label: Original
         comment: This is the original value. Enter a translation in the box marked 'Translation' below.
+        options:
+          disabled: true
       value:
         type: textarea
         label: Translation
