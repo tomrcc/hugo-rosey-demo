@@ -2,11 +2,11 @@ const fs = require('file-system');
 
 let inputFile = './rosey/base.json';
 let localesDirPath = './rosey/locales';
-let locale = 'fr-fr.json';
-let localePath = localesDirPath + '/' + locale;
+let locales = ['fr-fr', 'de-de'];
 let outputFileData = {};
 
-async function main() {
+async function main(locale) {
+  let localePath = localesDirPath + '/' + locale + '.json';
   if (fs.existsSync(inputFile)) {
     inputFile = JSON.parse(fs.readFileSync(inputFile)).keys;
   } else {
@@ -56,9 +56,10 @@ async function main() {
     console.log(localePath + ' updated succesfully');
   });
 }
-
-main().catch((err) => {
-  console.error('The sample encountered an error:', err);
-});
+for(locale in locales){
+  main(locale).catch((err) => {
+    console.error(`Encountered an error translating ${locale}:`, err);
+  });
+}
 
 module.exports = { main };
