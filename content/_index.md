@@ -84,4 +84,21 @@ content_blocks:
     button:
     image:
     image_alt:
+  - _bookshop_name: left-right
+    bg_image:
+    heading: Maybe it is to do with the content I deleted?
+    text: >-
+      Probably not - it was probably the installation of Rosey in our
+      package.json that did it. Do we have rosey install globally on our local
+      perhaps, and that's why it worked locally but not on CC? Lets readd some
+      content just in case
+
+      Linebreak!
+    button:
+    image:
+    image_alt:
 ---
+Some content
+
+A new paragraph
+A new line
