@@ -1,7 +1,9 @@
 const fs = require('file-system');
 
 let inputFile = './rosey/base.json';
-let outputFile = './rosey/locales/fr-fr.json';
+let localesDirPath = './rosey/locales';
+let locale = 'fr-fr.json';
+let localePath = localesDirPath + '/' + locale;
 let outputFileData = {};
 
 async function main() {
@@ -10,16 +12,14 @@ async function main() {
   } else {
     console.log('rosey/base.json does not exist');
   }
-  if (fs.existsSync(outputFile)) {
-    outputFileData = JSON.parse(fs.readFileSync(outputFile));
+  if (fs.existsSync(localePath)) {
+    outputFileData = JSON.parse(fs.readFileSync(localePath));
   } else {
     console.log('rosey/locales/fr-fr.json does not exist, creating one now');
-    fs.writeFileSync(outputFile, JSON.stringify({}));
+    fs.writeFileSync(localePath, JSON.stringify({}));
   }
 
   // TODO: 
-  // Delete keys in our locale that are no longer in our base.json
-
   // Refactor to take multiple languages
   // Set up env variables so we can use those to set langs, rather than hardcoding
 
@@ -51,9 +51,9 @@ async function main() {
     }
   }
 
-  fs.writeFile(outputFile, JSON.stringify(outputFileData), (err) => {
+  fs.writeFile(localePath, JSON.stringify(outputFileData), (err) => {
     if (err) throw err;
-    console.log(outputFile + ' updated succesfully');
+    console.log(localePath + ' updated succesfully');
   });
 }
 
