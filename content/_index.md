@@ -77,4 +77,11 @@ content_blocks:
     button:
     image:
     image_alt:
+  - _bookshop_name: left-right
+    bg_image:
+    heading: Thats strange that worked
+    text: Some text
+    button:
+    image:
+    image_alt:
 ---
