@@ -63,14 +63,42 @@ content_blocks:
       button_color: '#c7588e'
     image: /images/transparent-bg/undraw-hello.svg
     image_alt:
+  - _bookshop_name: left-right
+    bg_image:
+    heading: Another Left Right
+    text: Some text
+    button:
+    image:
+    image_alt:
+  - _bookshop_name: left-right
+    bg_image:
+    heading: This one won't work
+    text: ''
+    button:
+    image:
+    image_alt:
+  - _bookshop_name: left-right
+    bg_image:
+    heading: Thats strange that worked
+    text: Some text
+    button:
+    image:
+    image_alt:
+  - _bookshop_name: left-right
+    bg_image:
+    heading: Maybe it is to do with the content I deleted?
+    text: >-
+      Probably not - it was probably the installation of Rosey in our
+      package.json that did it. Do we have rosey install globally on our local
+      perhaps, and that's why it worked locally but not on CC? Lets readd some
+      content just in case
+
+      Linebreak!
+    button:
+    image:
+    image_alt:
 ---
-Some text
+Some content
 
 A new paragraph
- A linebreak
- Another linebreak
-
-Another new paragraph
- A linebreak added in the content editor with hardwraps on
- Another linebreak added with hardwraps on
-A linebreak added with hardwraps off
+A new line

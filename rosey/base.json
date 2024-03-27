@@ -1,6 +1,14 @@
 {
   "version": 2,
   "keys": {
+    "Another Left Right": {
+      "original": "Another Left Right",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "Diff heading, prob would err if it was the same": {
       "original": "Diff heading, prob would err if it was the same",
       "value": null,
@@ -17,8 +25,32 @@
       },
       "total": 1
     },
+    "Maybe it is to do with the content I deleted?": {
+      "original": "Maybe it is to do with the content I deleted?",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "Thats strange that worked": {
+      "original": "Thats strange that worked",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "This heading changed": {
       "original": "This heading changed",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "This one won't work": {
+      "original": "This one won't work",
       "value": null,
       "pages": {
         "index.html": 1
