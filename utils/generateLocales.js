@@ -45,7 +45,7 @@ async function main() {
       }
       // If key no longer exists in our base.json, delete it from our locale
       if (inputFile[outputKey] === undefined) {
-        console.log('Need to delete key: ', outputKey)
+        console.log(`Deleting key: ${outputKey} from translations, as it is no longer found on the site.`)
         delete outputFileData[outputKey];
       }
     }
