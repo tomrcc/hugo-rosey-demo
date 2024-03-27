@@ -9,6 +9,6 @@ if [[ $TRANSLATE == "true" ]];
 then
   echo "Translating site with Rosey"
   # There's a little bit of shuffling around here to ensure the translated site ends up where CloudCannon picks up your site
-  mv ./public ./_untranslated_site                  
-  npx rosey@latest build --source _untranslated_site --dest public
+  mv ./public ./untranslated_site                  
+  npx rosey@latest build --source untranslated_site --dest public
 fi
