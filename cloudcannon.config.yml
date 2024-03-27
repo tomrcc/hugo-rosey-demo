@@ -41,6 +41,19 @@ collections_config:
     disable_add_folder: false
     disable_file_actions: false
     schemas:
+  translations:
+    path: rosey/locales
+    output: false
+    description: ''
+    icon: notes
+    _editables:
+    _inputs:
+    _select_data:
+    _structures:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
 _editables:
   content:
     # allow_custom_markup: true
