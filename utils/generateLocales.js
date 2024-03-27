@@ -20,7 +20,6 @@ async function main(locale) {
   }
 
   // TODO: 
-  // Refactor to take multiple languages
   // Set up env variables so we can use those to set langs, rather than hardcoding
 
   // Look into rosey check
@@ -56,10 +55,15 @@ async function main(locale) {
     console.log(localePath + ' updated succesfully');
   });
 }
-for(locale in locales){
+
+// Loop through locales
+for (let i = 0; i < locales.length; i++) {
+  const locale = locales[i];
+  
   main(locale).catch((err) => {
     console.error(`Encountered an error translating ${locale}:`, err);
   });
 }
+
 
 module.exports = { main };
