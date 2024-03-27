@@ -39,8 +39,8 @@ async function main() {
       // If key exists in both files, and already has a translation value, do nothing.
       if (outputKey === inputKey && outputTranslationObj.value === null) {
         outputFileData[inputKey] = {
-          original: translationEntry['original'],
-          value: translationEntry.value,
+          original: inputTranslationObj['original'],
+          value: inputTranslationObj.value,
         };
       }
       // If key no longer exists in our base.json, delete it from our locale
