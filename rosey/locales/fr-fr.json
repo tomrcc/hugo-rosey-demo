@@ -1,16 +1,1 @@
-{
-  "This heading changed": { "original": "This heading changed", "value": null },
-  "site-title": {
-    "original": "Hugo Rosey Demo",
-    "value": "Data editor wassup"
-  },
-  "Keep what you need. Delete the rest.": {
-    "original": "Keep what you need. Delete the rest.",
-    "value": "Bonjourno This is translated"
-  },
-  "Diff heading, prob would err if it was the same": {
-    "original": "Diff heading, prob would err if it was the same",
-    "value": "Oui Oui this is also translated"
-  },
-  "Another Left Right": { "original": "Another Left Right", "value": null }
-}
+{"This heading changed":{"original":"This heading changed","value":null},"site-title":{"original":"Hugo Rosey Demo","value":"Data editor wassup"},"Keep what you need. Delete the rest.":{"original":"Keep what you need. Delete the rest.","value":"Bonjourno This is translated"},"Diff heading, prob would err if it was the same":{"original":"Diff heading, prob would err if it was the same","value":"Oui Oui this is also translated"},"Another Left Right":{"original":"Another Left Right","value":null}}
