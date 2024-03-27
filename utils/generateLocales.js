@@ -2,11 +2,11 @@ const fs = require('file-system');
 
 let inputFile = './rosey/base.json';
 let localesDirPath = './rosey/locales';
-let locale = 'fr-fr.json';
-let localePath = localesDirPath + '/' + locale;
+let locales = ['fr-fr', 'de-de'];
 let outputFileData = {};
 
-async function main() {
+async function main(locale) {
+  let localePath = localesDirPath + '/' + locale + '.json';
   if (fs.existsSync(inputFile)) {
     inputFile = JSON.parse(fs.readFileSync(inputFile)).keys;
   } else {
@@ -20,7 +20,6 @@ async function main() {
   }
 
   // TODO: 
-  // Refactor to take multiple languages
   // Set up env variables so we can use those to set langs, rather than hardcoding
 
   // Look into rosey check
@@ -57,8 +56,14 @@ async function main() {
   });
 }
 
-main().catch((err) => {
-  console.error('The sample encountered an error:', err);
-});
+// Loop through locales
+for (let i = 0; i < locales.length; i++) {
+  const locale = locales[i];
+  
+  main(locale).catch((err) => {
+    console.error(`Encountered an error translating ${locale}:`, err);
+  });
+}
+
 
 module.exports = { main };
