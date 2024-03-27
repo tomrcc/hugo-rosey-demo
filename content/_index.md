@@ -44,6 +44,25 @@ content_blocks:
       button_color: '#c7588e'
     image: /images/transparent-bg/undraw-hello.svg
     image_alt:
+  - _bookshop_name: left-right
+    bg_image: /images/backgrounds/textures/home-waves.svg
+    heading: Diff heading, prob would err if it was the same
+    text: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    button:
+      _bookshop_name: global/button
+      path: /
+      button_text: Read Analysis
+      button_text_color: '#fff'
+      button_color: '#c7588e'
+    image: /images/transparent-bg/undraw-hello.svg
+    image_alt:
 ---
 Some text
 
