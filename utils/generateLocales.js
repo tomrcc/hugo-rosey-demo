@@ -26,7 +26,7 @@ async function main() {
   // Look into rosey check
   for (const inputKey in inputFile) {
     const inputTranslationObj = inputFile[inputKey];
-    // console.log('inputFile', inputTranslationObj);
+    // If key doesn't exist in our output file, add it
     if (outputFileData[inputKey] === undefined) {
       outputFileData[inputKey] = {
         original: inputTranslationObj['original'],
@@ -35,13 +35,15 @@ async function main() {
     }
     for (const outputKey in outputFileData) {
       const outputTranslationObj = outputFileData[outputKey];
-      // console.log('outputFileData', outputTranslationObj);
+      // If key exists in both files, and doesn't already have a translation value update the value.
+      // If key exists in both files, and already has a translation value, do nothing.
       if (outputKey === inputKey && outputTranslationObj.value === null) {
         outputFileData[inputKey] = {
           original: translationEntry['original'],
           value: translationEntry.value,
         };
       }
+      // If key no longer exists in our base.json, delete it from our locale
       if (inputFile[outputKey] === undefined) {
         delete outputFileData[outputKey];
       }
