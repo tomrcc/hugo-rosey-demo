@@ -70,6 +70,13 @@ content_blocks:
     button:
     image:
     image_alt:
+  - _bookshop_name: left-right
+    bg_image:
+    heading: This one won't work
+    text: ''
+    button:
+    image:
+    image_alt:
 ---
 Some text
 
