@@ -2,9 +2,9 @@ const fs = require('file-system');
 
 let inputFile = './rosey/base.json';
 let localesDirPath = './rosey/locales';
-let locales = ['fr-fr', 'de-de'];
+let locales = process.env.LOCALES.split(',');
+console.log(locales);
 let outputFileData = {};
-console.log(process.env.LOCALES);
 
 async function main(locale) {
   let localePath = localesDirPath + '/' + locale + '.json';
@@ -19,9 +19,6 @@ async function main(locale) {
     console.log('rosey/locales/fr-fr.json does not exist, creating one now');
     fs.writeFileSync(localePath, JSON.stringify({}));
   }
-
-  // TODO: 
-  // Set up env variables so we can use those to set langs, rather than hardcoding
 
   for (const inputKey in inputFile) {
     const inputTranslationObj = inputFile[inputKey];
