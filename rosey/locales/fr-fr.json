@@ -1,8 +1,14 @@
 {
-  "This heading changed": { "original": "This heading changed", "value": null },
-  "site-title": { "original": "Hugo Rosey Demo", "value": "This is something" },
+  "This heading changed": {
+    "original": "This heading changed",
+    "value": null
+  },
+  "site-title": {
+    "original": "Hugo Rosey Demo",
+    "value": "This is something"
+  },
   "Keep what you need. Delete the rest.": {
     "original": "Keep what you need. Delete the rest.",
-    "value": null
+    "value": "Bonjourno This is translated"
   }
 }
