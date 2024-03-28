@@ -9,6 +9,56 @@
       },
       "total": 1
     },
+    "About": {
+      "original": "About",
+      "value": null,
+      "pages": {
+        "categories/index.html": 2,
+        "index.html": 2,
+        "tags/index.html": 2
+      },
+      "total": 6
+    },
+    "Blog": {
+      "original": "Blog",
+      "value": null,
+      "pages": {
+        "categories/index.html": 2,
+        "index.html": 2,
+        "tags/index.html": 2
+      },
+      "total": 6
+    },
+    "Contact": {
+      "original": "Contact",
+      "value": null,
+      "pages": {
+        "categories/index.html": 2,
+        "index.html": 2,
+        "tags/index.html": 2
+      },
+      "total": 6
+    },
+    "Feature": {
+      "original": "Feature",
+      "value": null,
+      "pages": {
+        "categories/index.html": 2,
+        "index.html": 2,
+        "tags/index.html": 2
+      },
+      "total": 6
+    },
+    "Home": {
+      "original": "Home",
+      "value": null,
+      "pages": {
+        "categories/index.html": 2,
+        "index.html": 2,
+        "tags/index.html": 2
+      },
+      "total": 6
+    },
     "Hugo Rosey Demo": {
       "original": "Hugo Rosey Demo",
       "value": null,
@@ -32,6 +82,16 @@
         "index.html": 1
       },
       "total": 1
+    },
+    "Pricing": {
+      "original": "Pricing",
+      "value": null,
+      "pages": {
+        "categories/index.html": 2,
+        "index.html": 2,
+        "tags/index.html": 2
+      },
+      "total": 6
     },
     "Read More": {
       "original": "\n      Read More\n    ",

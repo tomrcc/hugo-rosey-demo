@@ -79,7 +79,7 @@
           {{ range .items }}
             {{ $url := .link }}
             <li>
-              <a class="nav-link" href="{{ .link }}">{{ .text }}</a>
+              <a class="nav-link" href="{{ .link }}" data-rosey="{{ .text }}">{{ .text }}</a>
             </li>
           {{ end }}
         </ul>
@@ -88,7 +88,7 @@
           {{ range .items }}
             {{ $url := .link }}
             <li class="{{ $c }}__nav-list-item">
-              <a class="nav-link" href="{{ .link }}">{{ .text }}</a>
+              <a class="nav-link" href="{{ .link }}" data-rosey="{{ .text }}">{{ .text }}</a>
             </li>
           {{ end }}
         </ul>
