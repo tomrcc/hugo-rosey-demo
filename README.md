@@ -1,24 +1,28 @@
-# Hugo Bookshop Starter
+# Hugo Rosey Bookshop Starter
 
-A starter template for a new Hugo site using [Bookshop](https://github.com/CloudCannon/bookshop)
+A starter template for a new Hugo site built with [Bookshop](https://github.com/CloudCannon/bookshop) components.
+This template uses [Rosey](https://rosey.app/) to generate a multilingual site from one language.
+We run Rosey on your built site in the CloudCannon postbuild.
+Rosey generates a base.json file wherever it detects a ```data-rosey=""``` tag in your built site.
+From this base.json file we run a script that creates a locales file for each locale listed in your LOCALES environment variable.
+Editors can see these locales files in the CloudCannon UI, and enter translations for each phrase.
+Rosey then uses the locales files, to generate a multilingual site.
 
-To run locally:
-```bash
-hugo server -D
-```
-
-To see the component browser locally: (in another terminal)
+To run site locally:
 ```bash
 npm i
-npx @bookshop/browser
+npm start
 ```
-You can now load `/components` on your site and see the component library.
 
-If building on CloudCannon, this page will also show a hosted version of the component library.
-
-## Structure
-The bookshop components live in `component-library`, which is loaded as a Hugo module in `config.toml`.
-
-The site also pulls in the main dependency of `github.com/cloudcannon/bookshop/hugo/v2`.
-
-To learn more, read the [Bookshop Hugo Guide](https://github.com/CloudCannon/bookshop/blob/main/guides/hugo.adoc).
+To run Rosey locally:
+```bash
+npm i
+hugo
+npx rosey generate --source public
+node utils/generateLocales.js
+```
+Enter a translated value in one of the locale files.
+To generate a multilingual site locally:
+```bash
+npx rosey build --source public --dest public_translated
+```

@@ -4,7 +4,7 @@ paths:
   includes: layouts
   layouts: layouts
   static: static
-  uploads: static/uploads
+  uploads: static/images
   source: ''
   archetypes: archetypes
   assets: assets
@@ -17,69 +17,31 @@ collections_config:
     path: content
     output: true
     filter: strict
-    parse_branch_index: true
-    description: ''
-    icon: notes
+    icon: laptop_mac
     _enabled_editors:
       - visual
     _editables:
     _inputs:
-    _select_data:
-    _structures:
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    schemas:
   data:
     path: data
     output: false
-    description: ''
     icon: notes
-    _editables:
-    _inputs:
-    _select_data:
-    _structures:
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    schemas:
   translations:
     path: rosey/locales
     output: false
-    description: ''
-    icon: notes
-    _editables:
+    icon: translate
     _inputs:
       original:
         type: textarea
         label: Original
         comment: This is the original value. Enter a translation in the box marked 'Translation' below.
-        options:
-          disabled: true
       value:
         type: textarea
         label: Translation
         comment: Enter a translation for the text above.
-    _select_data:
-    _structures:
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    schemas:
-_editables:
-  content:
-    # allow_custom_markup: true
-    # remove_custom_markup: false
-data_config: {}
-source_editor:
-  tab_size: 2
-  theme: monokai
-  show_gutter: true
 timezone: Etc/UTC
-
-generator:
-  metadata:
-    markdown: goldmark
-    goldmark:
-      renderer:
-        hardWraps: true
+_inputs:
+  seo:
+    options:
+      preview:
+        icon: manage_search

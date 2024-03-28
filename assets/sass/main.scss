@@ -22,10 +22,6 @@ body {
     @media screen and (min-width: $max-width-md) {
       padding: $base-padding 32px;
     }
-
-    @media screen and (min-width: $max-width-xl) {
-      padding: 64px 157px;
-    }
   }
 
   &__logo {
