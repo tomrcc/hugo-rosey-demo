@@ -2,7 +2,8 @@ const fs = require('file-system');
 
 let inputFile = './rosey/base.json';
 let localesDirPath = './rosey/locales';
-let locales = ['fr-fr', 'de-de'];
+let locales = process.env.LOCALES.split(',');
+console.log(locales);
 let outputFileData = {};
 
 async function main(locale) {
@@ -19,10 +20,6 @@ async function main(locale) {
     fs.writeFileSync(localePath, JSON.stringify({}));
   }
 
-  // TODO: 
-  // Set up env variables so we can use those to set langs, rather than hardcoding
-  // Test the case where a key already exists in the locale file, but is present multiple times in the base.json
-    // Could be a problem if we have a 'read more' button that is used in multiple places, but we only want to translate it once
   for (const inputKey in inputFile) {
     const inputTranslationObj = inputFile[inputKey];
     // If key doesn't exist in our output file, add it
