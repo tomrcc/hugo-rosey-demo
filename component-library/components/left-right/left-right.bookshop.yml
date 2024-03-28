@@ -22,3 +22,12 @@ preview:
 _inputs:
   text:
     type: markdown
+    options:
+      bold: true
+      italic: true
+      strike: true
+      underline: true
+      link: true
+      undo: true
+      redo: true
+      removeformat: true

@@ -40,3 +40,8 @@ collections_config:
         label: Translation
         comment: Enter a translation for the text above.
 timezone: Etc/UTC
+_inputs:
+  seo:
+    options:
+      preview:
+        icon: manage_search
