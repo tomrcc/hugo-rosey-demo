@@ -1,9 +1,6 @@
 {{ $c := "hero" }}
 
 <div class="{{ $c }}">
-   {{ if .bg_image }}
-      <img class="{{ $c }}__svg-img" src={{ .bg_image }} alt="" />
-   {{ end }}
    <div class="{{ $c }}__wrapper">
       {{ with .heading }}
       <h1 data-rosey="{{ . }}">{{ . }}</h1>

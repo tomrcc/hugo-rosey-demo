@@ -1,9 +1,6 @@
 {{ $c := "left-right" }}
 
 <div class="{{ $c }}">
-   {{ if .bg_image }}
-      <img class="{{ $c }}__svg-img" src={{ .bg_image }} alt="" />
-   {{ end }}
    <div class="{{ $c }}__wrapper">
       <div class="{{ $c }}__text">
          {{ with .heading }}
