@@ -5,32 +5,32 @@ _inputs:
     comment: >-
       Locations:
 
-        - [index.html](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
-        - [index.html](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
+        - [Home](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages) 
+        - [About](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
   a-test-string:
     label: A test string
     type: textarea
     comment: >-
       Locations:
-        - [index.html](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
+        - [Home](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
   an-empty-test-string:
     label: An empty test string
     type: textarea
     comment: >-
       Locations:
-        - [index.html](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
+        - [Home](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
   an-empty-test-string:
     label: An empty test string
     type: textarea
     comment: >-
       Locations:
-        - [index.html](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
+        - [Home](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
   nice-little-fluffy-clouds-laying-around-in-the-sky-being-lazy-i-like-to-beat-the-brush-let's-make-some-happy-little-clouds-in-our-world-the-least-little-bit-can-do-so-much-let's-get-wild-today-trees-grow-however-makes-them-happy:
     label: Nice little fluffy clouds laying around in the sky being lazy. I like to beat the brush. Let's make some happy little clouds in our world. The least little bit can do so much. Let's get wild today. Trees grow however makes them happy.
     type: textarea
     comment: >-
       Locations:
-        - [index.html](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
+        - [Home](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
 some-text-to-be-translated: 'algún texto para traducir'
 a-test-string: 'una cadena de prueba'
 an-empty-test-string: ''
