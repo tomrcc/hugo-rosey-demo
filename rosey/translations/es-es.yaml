@@ -5,4 +5,18 @@ _inputs:
     comment: >-
       Locations:
         - [index.html](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
+  a-test-string:
+    label: A test string
+    type: textarea
+    comment: >-
+      Locations:
+        - [index.html](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
+  an-empty-test-string:
+    label: An empty test string
+    type: textarea
+    comment: >-
+      Locations:
+        - [index.html](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
 some-text-to-be-translated: 'algún texto para traducir'
+a-test-string: 'una cadena de prueba'
+an-empty-test-string: ''
