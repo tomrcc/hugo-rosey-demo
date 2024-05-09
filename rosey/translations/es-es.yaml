@@ -4,5 +4,5 @@ _inputs:
     type: textarea
     comment: >-
       Locations:
-        - [index.html](cloudcannon:collections/content/_index.md/#some-text-to-be-translated)
+        - [index.html](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
 some-text-to-be-translated: 'algún texto para traducir'
