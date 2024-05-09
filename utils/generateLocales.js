@@ -3,7 +3,6 @@ const fs = require('file-system');
 let inputFile = './rosey/base.json';
 let localesDirPath = './rosey/locales';
 let locales = process.env.LOCALES.toLowerCase().split(',');
-console.log(locales);
 let outputFileData = {};
 
 async function main(locale) {
