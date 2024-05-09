@@ -1,0 +1,8 @@
+_inputs:
+  some-text-to-be-translated:
+    label: Some text to be translated
+    type: textarea
+    comment: >-
+      Locations:
+        - [index.html](/#some-text-to-be-translated)
+some-text-to-be-translated: 'algún texto para traducir'
