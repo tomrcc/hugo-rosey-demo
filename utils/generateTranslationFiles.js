@@ -37,12 +37,11 @@ async function main(locale) {
 
     const translationLocations = translationPages.map(
       (page) =>
-        `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)`
+        `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F${page
+          .replace('index', '_index')
+          .replace('/', '%2F')
+          .replace('.html', '.md')}&collection=pages)`
     );
-
-    console.log(translationLocations);
-    // const translationLocationComment = 'Locations: ' + translationLocations;
-    // console.log(translationLocationComment);
 
     // If no inputs obj exists, create one
     if (!outputFileData['_inputs']) {
