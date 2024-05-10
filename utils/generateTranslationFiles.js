@@ -40,7 +40,7 @@ async function main(locale) {
           .replace('index', '_index')
           .replace('/', '%2F')
           .replace('.html', '.md')}&collection=pages)`;
-      }
+      } else return null;
     });
 
     // If no inputs obj exists, create one
