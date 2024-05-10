@@ -2,7 +2,8 @@
 title: Home
 seo:
   page_description: >-
-    A multilingual site, made using a translation workflow with Rosey in CloudCannon.
+    A multilingual site, made using a translation workflow with Rosey in
+    CloudCannon.
   canonical_url:
   featured_image:
   featured_image_alt:
@@ -39,10 +40,7 @@ content_blocks:
     image_alt:
   - _bookshop_name: left-right
     heading: A fresh left right.
-    text: >-
-      Make your own copy of this repository. Reference it or use it as a
-      template to get up and running with translation workflows in CloudCannon
-      using Rosey.
+    text: What happens if I change this?
     button:
       _bookshop_name: global/button
       path: https://github.com/tomrcc/hugo-rosey-demo
