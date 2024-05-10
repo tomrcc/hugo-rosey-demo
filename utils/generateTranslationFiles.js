@@ -30,6 +30,7 @@ async function main(locale) {
     const slugifiedInputKey = slugify(inputTranslationObj.original, {
       remove: '.',
     }).toLowerCase();
+    const translationPages = Object.keys(inputTranslationObj.pages);
 
     // Add it to our _inputs obj as well
     if (!outputFileData['_inputs']) {
@@ -40,9 +41,7 @@ async function main(locale) {
       outputFileData['_inputs'][slugifiedInputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
-        comment: `Locations: [${Object.keys(
-          inputTranslationObj.pages
-        )}](https://www.google.com)`,
+        comment: `Locations: [${translationPages}](https://www.google.com)`,
       };
     }
 
