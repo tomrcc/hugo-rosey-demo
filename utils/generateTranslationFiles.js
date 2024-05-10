@@ -27,14 +27,22 @@ async function main(locale) {
 
   for (const inputKey in inputFileData) {
     const inputTranslationObj = inputFileData[inputKey];
+
     const slugifiedInputKey = slugify(inputTranslationObj.original, {
       remove: '.',
     }).toLowerCase();
+
     const translationPages = Object.keys(inputTranslationObj.pages);
-    const translationLocations = translationPages.forEach((page) => {
-      return `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages) |`;
-    });
-    const translationLocationComment = `Locations: ${translationLocations}`;
+    console.log(translationPages);
+
+    const translationLocations = translationPages.map(
+      (page) =>
+        `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages) |`
+    );
+
+    console.log(translationLocations);
+    // const translationLocationComment = 'Locations: ' + translationLocations;
+    // console.log(translationLocationComment);
 
     // If no inputs obj exists, create one
     if (!outputFileData['_inputs']) {
@@ -46,7 +54,7 @@ async function main(locale) {
       outputFileData['_inputs'][slugifiedInputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
-        comment: translationLocationComment,
+        comment: translationLocations,
       };
     }
 
