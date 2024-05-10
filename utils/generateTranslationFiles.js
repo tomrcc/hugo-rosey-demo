@@ -31,10 +31,10 @@ async function main(locale) {
       remove: '.',
     }).toLowerCase();
     const translationPages = Object.keys(inputTranslationObj.pages);
-    const translationLocationComment =
-      'Locations: [' +
-      translationPages[0] +
-      '](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)';
+    const translationLocations = translationPages.forEach((page) => {
+      return `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages) |`;
+    });
+    const translationLocationComment = `Locations: ${translationLocations}`;
 
     // If no inputs obj exists, create one
     if (!outputFileData['_inputs']) {
