@@ -31,6 +31,8 @@ async function main(locale) {
       remove: '.',
     }).toLowerCase();
     const translationPages = Object.keys(inputTranslationObj.pages);
+    const translationLocationComment =
+      'Locations: [' + translationPages + '](https://www.google.com)';
 
     // Add it to our _inputs obj as well
     if (!outputFileData['_inputs']) {
@@ -41,7 +43,7 @@ async function main(locale) {
       outputFileData['_inputs'][slugifiedInputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
-        comment: `Locations: [${translationPages}](https://www.google.com)`,
+        comment: translationLocationComment,
       };
     }
 
