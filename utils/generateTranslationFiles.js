@@ -37,7 +37,7 @@ async function main(locale) {
 
     const translationLocations = translationPages.map(
       (page) =>
-        `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages) |`
+        `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)`
     );
 
     console.log(translationLocations);
@@ -54,7 +54,7 @@ async function main(locale) {
       outputFileData['_inputs'][slugifiedInputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
-        comment: translationLocations,
+        comment: translationLocations.join(', '),
       };
     }
 
