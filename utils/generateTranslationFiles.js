@@ -32,7 +32,9 @@ async function main(locale) {
     }).toLowerCase();
     const translationPages = Object.keys(inputTranslationObj.pages);
     const translationLocationComment =
-      'Locations: [' + translationPages + '](https://www.google.com)';
+      'Locations: [' +
+      translationPages[0] +
+      '](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)';
 
     // If no inputs obj exists, create one
     if (!outputFileData['_inputs']) {
@@ -44,8 +46,7 @@ async function main(locale) {
       outputFileData['_inputs'][slugifiedInputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
-        comment:
-          '[Home](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)',
+        comment: translationLocationComment,
       };
     }
 
