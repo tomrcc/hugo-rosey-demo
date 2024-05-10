@@ -87,9 +87,9 @@
       "original": "Make your own copy of this repository. Reference it or use it as a template to get up and running with translation workflows in CloudCannon using Rosey.",
       "value": null,
       "pages": {
-        "index.html": 2
+        "index.html": 1
       },
-      "total": 2
+      "total": 1
     },
     "Pricing": {
       "original": "Pricing",
@@ -108,6 +108,14 @@
         "index.html": 3
       },
       "total": 3
+    },
+    "What happens if I change this?": {
+      "original": "What happens if I change this?",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
     },
     "site-title": {
       "original": "Hugo Rosey Demo",
