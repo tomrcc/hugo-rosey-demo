@@ -40,7 +40,9 @@ async function main(locale) {
       outputFileData['_inputs'][slugifiedInputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
-        comment: `Locations: ${Object.keys(inputTranslationObj.pages)}`,
+        comment: `Locations: [${Object.keys(
+          inputTranslationObj.pages
+        )}](cloudcannon:collections/pages:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)`,
       };
     }
 
