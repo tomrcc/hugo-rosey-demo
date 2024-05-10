@@ -1,37 +1,67 @@
 _inputs:
-  some-text-to-be-translated:
-    label: Some text to be translated
+  a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannon's-build-configuration:
+    label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
+      extra setup so that we can enter translations via the CloudCannon GUI.
+      Additional languages can be set in the environment variables in
+      CloudCannon’s build configuration.
     type: textarea
-    comment: >-
-      Locations:
-
-        - [Home](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages) 
-        - [About](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
-  a-test-string:
-    label: A test string
+    comment: "Locations: index.html"
+  about:
+    label: About
     type: textarea
-    comment: >-
-      Locations:
-        - [Home](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
-  an-empty-test-string:
-    label: An empty test string
+    comment: "Locations: categories/index.html,index.html,tags/index.html"
+  blog:
+    label: Blog
     type: textarea
-    comment: >-
-      Locations:
-        - [Home](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
-  an-empty-test-string:
-    label: An empty test string
+    comment: "Locations: categories/index.html,index.html,tags/index.html"
+  contact:
+    label: Contact
     type: textarea
-    comment: >-
-      Locations:
-        - [Home](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
-  nice-little-fluffy-clouds-laying-around-in-the-sky-being-lazy-i-like-to-beat-the-brush-let's-make-some-happy-little-clouds-in-our-world-the-least-little-bit-can-do-so-much-let's-get-wild-today-trees-grow-however-makes-them-happy:
-    label: Nice little fluffy clouds laying around in the sky being lazy. I like to beat the brush. Let's make some happy little clouds in our world. The least little bit can do so much. Let's get wild today. Trees grow however makes them happy.
+    comment: "Locations: categories/index.html,index.html,tags/index.html"
+  feature:
+    label: Feature
     type: textarea
-    comment: >-
-      Locations:
-        - [Home](collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)
-some-text-to-be-translated: 'algún texto para traducir'
-a-test-string: 'una cadena de prueba'
-an-empty-test-string: ''
-nice-little-fluffy-clouds-laying-around-in-the-sky-being-lazy-i-like-to-beat-the-brush-let's-make-some-happy-little-clouds-in-our-world-the-least-little-bit-can-do-so-much-let's-get-wild-today-trees-grow-however-makes-them-happy: ''
+    comment: "Locations: categories/index.html,index.html,tags/index.html"
+  home:
+    label: Home
+    type: textarea
+    comment: "Locations: categories/index.html,index.html,tags/index.html"
+  hugo-rosey-demo:
+    label: Hugo Rosey Demo
+    type: textarea
+    comment: "Locations: index.html"
+  keep-what-you-need-delete-the-rest:
+    label: Keep what you need. Delete the rest.
+    type: textarea
+    comment: "Locations: index.html"
+  make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey:
+    label: Make your own copy of this repository. Reference it or use it as a
+      template to get up and running with translation workflows in CloudCannon
+      using Rosey.
+    type: textarea
+    comment: "Locations: index.html"
+  pricing:
+    label: Pricing
+    type: textarea
+    comment: "Locations: categories/index.html,index.html,tags/index.html"
+  read-more:
+    label: "\n      Read More\n    "
+    type: textarea
+    comment: "Locations: index.html"
+a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannon's-build-configuration:
+  A demonstration of how Hugo and Rosey work in CloudCannon. This site has extra
+  setup so that we can enter translations via the CloudCannon GUI. Additional
+  languages can be set in the environment variables in CloudCannon’s build
+  configuration.
+about: About
+blog: Blog
+contact: Contact
+feature: Feature
+home: Home
+hugo-rosey-demo: Hugo Rosey Demo
+keep-what-you-need-delete-the-rest: Keep what you need. Delete the rest.
+make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey:
+  Make your own copy of this repository. Reference it or use it as a template to
+  get up and running with translation workflows in CloudCannon using Rosey.
+pricing: Pricing
+read-more: "\n      Read More\n    "

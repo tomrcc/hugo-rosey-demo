@@ -1,69 +1,68 @@
 const fs = require('file-system');
+const YAML = require('yaml');
+const slugify = require('slugify');
 
-let inputFile = './rosey/base.json';
-let locales = process.env.LOCALES.toLowerCase().split(',');
-let translationFilesDirPath = './rosey/translations';
+const inputFilePath = './rosey/base.json';
+const translationFilesDirPath = './rosey/translations';
+const locales = ['es-es'];
 let outputFileData = {};
+let inputFileData = {};
 
 async function main(locale) {
-  let localePath = localesDirPath + '/' + locale + '.json';
+  // Find the translation file path
+  const translationFilePath = translationFilesDirPath + '/' + locale + '.yaml';
 
-  if (fs.existsSync(inputFile)) {
-    inputFile = JSON.parse(fs.readFileSync(inputFile)).keys;
+  if (fs.existsSync(inputFilePath)) {
+    inputFileData = JSON.parse(fs.readFileSync(inputFilePath)).keys;
   } else {
     console.log('rosey/base.json does not exist');
   }
 
-  if (fs.existsSync(localePath)) {
-    outputFileData = JSON.parse(fs.readFileSync(localePath));
+  if (fs.existsSync(translationFilePath)) {
+    outputFileData = YAML.parse(fs.readFileSync(translationFilePath, 'utf8'));
   } else {
-    console.log(`${localePath} does not exist, creating one now`);
-    fs.writeFileSync(localePath, JSON.stringify({}));
+    console.log(`${translationFilePath} does not exist, creating one now`);
+    fs.writeFileSync(translationFilePath, '_inputs: {}');
   }
 
-  for (const inputKey in inputFile) {
-    const inputTranslationObj = inputFile[inputKey];
-    // If key doesn't exist in our output file, add it
-    if (outputFileData[inputKey] === undefined) {
-      outputFileData[inputKey] = {
-        original: inputTranslationObj['original'],
-        value: inputTranslationObj.value,
+  for (const inputKey in inputFileData) {
+    const inputTranslationObj = inputFileData[inputKey];
+    const slugifiedInputKey = slugify(inputTranslationObj.original, {
+      remove: '.',
+    }).toLowerCase();
+
+    // Add it to our _inputs obj as well
+    if (!outputFileData['_inputs']) {
+      outputFileData['_inputs'] = {};
+    }
+
+    if (!outputFileData['_inputs'][slugifiedInputKey]) {
+      outputFileData['_inputs'][slugifiedInputKey] = {
+        label: inputTranslationObj.original,
+        type: 'textarea',
+        comment: `Locations: ${Object.keys(inputTranslationObj.pages)}`,
       };
     }
 
-    for (const outputKey in outputFileData) {
-      const outputTranslationObj = outputFileData[outputKey];
-      // If key exists in both files, and doesn't already have a translation value update the value.
-      // If key exists in both files, and already has a translation value, do nothing.
-      if (outputKey === inputKey && outputTranslationObj.value === null) {
-        outputFileData[inputKey] = {
-          original: inputTranslationObj['original'],
-          value: inputTranslationObj.value,
-        };
-      }
-      
-      // If key no longer exists in our base.json, delete it from our locale
-      if (inputFile[outputKey] === undefined) {
-        console.log(`Deleting key: ${outputKey} from translations, as it is no longer found on the site.`)
-        delete outputFileData[outputKey];
-      }
+    // If key doesn't exist in our output file, add it
+    if (outputFileData[slugifiedInputKey] === undefined) {
+      outputFileData[slugifiedInputKey] = inputTranslationObj['original'];
     }
   }
 
-  fs.writeFile(localePath, JSON.stringify(outputFileData), (err) => {
+  fs.writeFile(translationFilePath, YAML.stringify(outputFileData), (err) => {
     if (err) throw err;
-    console.log(localePath + ' updated succesfully');
+    console.log(translationFilePath + ' updated succesfully');
   });
 }
 
 // Loop through locales
 for (let i = 0; i < locales.length; i++) {
   const locale = locales[i];
-  
+
   main(locale).catch((err) => {
     console.error(`Encountered an error translating ${locale}:`, err);
   });
 }
-
 
 module.exports = { main };
