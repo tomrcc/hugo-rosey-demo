@@ -33,33 +33,33 @@ async function main(locale) {
     }).toLowerCase();
 
     const translationPages = Object.keys(inputTranslationObj.pages);
-    console.log(translationPages);
 
-    const translationLocations = translationPages.map(
-      (page) =>
-        `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F${page
+    const translationLocations = translationPages.map((page) => {
+      if (page !== 'categories/index.html' && page !== 'tags/index.html') {
+        return `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F${page
           .replace('index', '_index')
           .replace('/', '%2F')
-          .replace('.html', '.md')}&collection=pages)`
-    );
+          .replace('.html', '.md')}&collection=pages)`;
+      }
+    });
 
     // If no inputs obj exists, create one
     if (!outputFileData['_inputs']) {
       outputFileData['_inputs'] = {};
     }
 
-    // Add each entry to our _inputs obj
+    // Add each entry to our _inputs obj if not there already
     if (!outputFileData['_inputs'][slugifiedInputKey]) {
       outputFileData['_inputs'][slugifiedInputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
-        comment: translationLocations.join(', '),
+        comment: translationLocations.join(','),
       };
     }
 
     // If entry doesn't exist in our output file, add it
-    if (outputFileData[slugifiedInputKey] === undefined) {
-      outputFileData[slugifiedInputKey] = inputTranslationObj['original'];
+    if (!outputFileData[slugifiedInputKey]) {
+      outputFileData[slugifiedInputKey] = '';
     }
   }
 

@@ -495,9 +495,6 @@ video {
 .block {
   display: block;
 }
-.grow {
-  flex-grow: 1;
-}
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
