@@ -34,20 +34,22 @@ async function main(locale) {
     const translationLocationComment =
       'Locations: [' + translationPages + '](https://www.google.com)';
 
-    // Add it to our _inputs obj as well
+    // If no inputs obj exists, create one
     if (!outputFileData['_inputs']) {
       outputFileData['_inputs'] = {};
     }
 
+    // Add each entry to our _inputs obj
     if (!outputFileData['_inputs'][slugifiedInputKey]) {
       outputFileData['_inputs'][slugifiedInputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
-        comment: translationLocationComment,
+        comment:
+          '[Home](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)',
       };
     }
 
-    // If key doesn't exist in our output file, add it
+    // If entry doesn't exist in our output file, add it
     if (outputFileData[slugifiedInputKey] === undefined) {
       outputFileData[slugifiedInputKey] = inputTranslationObj['original'];
     }
