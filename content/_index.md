@@ -38,15 +38,4 @@ content_blocks:
       button_color: '#034ad8'
     image: /images/transparent-bg/undraw-hello.svg
     image_alt:
-  - _bookshop_name: left-right
-    heading: A fresh left right.
-    text: What happens if I change this?
-    button:
-      _bookshop_name: global/button
-      path: https://github.com/tomrcc/hugo-rosey-demo
-      button_text: Read More
-      button_text_color: '#ffffff'
-      button_color: '#034ad8'
-    image: /images/transparent-bg/undraw-hello.svg
-    image_alt:
 ---
