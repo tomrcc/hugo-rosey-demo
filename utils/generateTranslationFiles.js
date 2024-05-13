@@ -7,6 +7,7 @@ const translationFilesDirPath = './rosey/translations';
 const locales = ['es-es'];
 let outputFileData = {};
 let inputFileData = {};
+let cleanedOutputFileData = {};
 
 async function main(locale) {
   // Find the translation file path
@@ -25,6 +26,8 @@ async function main(locale) {
     fs.writeFileSync(translationFilePath, '_inputs: {}');
   }
 
+  const outputKeys = Object.keys(outputFileData);
+
   for (const inputKey in inputFileData) {
     const inputTranslationObj = inputFileData[inputKey];
 
@@ -35,22 +38,25 @@ async function main(locale) {
     const translationPages = Object.keys(inputTranslationObj.pages);
 
     const translationLocations = translationPages.map((page) => {
-      if (page !== 'categories/index.html' && page !== 'tags/index.html') {
-        return `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F${page
-          .replace('index', '_index')
-          .replace('/', '%2F')
-          .replace('.html', '.md')}&collection=pages)`;
-      } else return null;
+      // if (page === 'categories/index.html' || page === 'tags/index.html') {
+      //   return;
+      // }
+      // TODO: Add dynamic collection to editor link
+      // TODO: Maybe add config file that you can set content/visual editor or live site preview for translation link
+      return `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F${page
+        .replace('index', '_index')
+        .replace('/', '%2F')
+        .replace('.html', '.md')}&collection=pages)`;
     });
 
     // If no inputs obj exists, create one
-    if (!outputFileData['_inputs']) {
-      outputFileData['_inputs'] = {};
+    if (!cleanedOutputFileData['_inputs']) {
+      cleanedOutputFileData['_inputs'] = {};
     }
 
     // Add each entry to our _inputs obj if not there already
-    if (!outputFileData['_inputs'][slugifiedInputKey]) {
-      outputFileData['_inputs'][slugifiedInputKey] = {
+    if (!cleanedOutputFileData['_inputs'][slugifiedInputKey]) {
+      cleanedOutputFileData['_inputs'][slugifiedInputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
         comment: translationLocations.join(','),
@@ -58,15 +64,27 @@ async function main(locale) {
     }
 
     // If entry doesn't exist in our output file, add it
-    if (!outputFileData[slugifiedInputKey]) {
-      outputFileData[slugifiedInputKey] = '';
+    if (!cleanedOutputFileData[slugifiedInputKey]) {
+      cleanedOutputFileData[slugifiedInputKey] = '';
     }
+
+    // Only add the key to our output data if it still exists in base.json
+    // If entry no longer exists in base.json we don't it
+    outputKeys.forEach((key) => {
+      if (slugifiedInputKey === key) {
+        cleanedOutputFileData[key] = outputFileData[key];
+      }
+    });
   }
 
-  fs.writeFile(translationFilePath, YAML.stringify(outputFileData), (err) => {
-    if (err) throw err;
-    console.log(translationFilePath + ' updated succesfully');
-  });
+  fs.writeFile(
+    translationFilePath,
+    YAML.stringify(cleanedOutputFileData),
+    (err) => {
+      if (err) throw err;
+      console.log(translationFilePath + ' updated succesfully');
+    }
+  );
 }
 
 // Loop through locales
