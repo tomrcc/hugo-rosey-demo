@@ -13,20 +13,20 @@ async function main(locale) {
   // Find the translation file path
   const translationFilePath = translationFilesDirPath + '/' + locale + '.yaml';
 
+  // Get the Rosey generated data
   if (fs.existsSync(inputFilePath)) {
     inputFileData = JSON.parse(fs.readFileSync(inputFilePath)).keys;
   } else {
     console.log('rosey/base.json does not exist');
   }
 
+  // Get our old translations file
   if (fs.existsSync(translationFilePath)) {
     outputFileData = YAML.parse(fs.readFileSync(translationFilePath, 'utf8'));
   } else {
     console.log(`${translationFilePath} does not exist, creating one now`);
     fs.writeFileSync(translationFilePath, '_inputs: {}');
   }
-
-  const outputKeys = Object.keys(outputFileData);
 
   for (const inputKey in inputFileData) {
     const inputTranslationObj = inputFileData[inputKey];
@@ -35,12 +35,9 @@ async function main(locale) {
       remove: '.',
     }).toLowerCase();
 
+    // Add a link for each page the translation appears on
     const translationPages = Object.keys(inputTranslationObj.pages);
-
     const translationLocations = translationPages.map((page) => {
-      // if (page === 'categories/index.html' || page === 'tags/index.html') {
-      //   return;
-      // }
       // TODO: Add dynamic collection to editor link
       // TODO: Maybe add config file that you can set content/visual editor or live site preview for translation link
       return `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F${page
@@ -69,7 +66,8 @@ async function main(locale) {
     }
 
     // Only add the key to our output data if it still exists in base.json
-    // If entry no longer exists in base.json we don't it
+    // If entry no longer exists in base.json we don't add it
+    const outputKeys = Object.keys(outputFileData);
     outputKeys.forEach((key) => {
       if (slugifiedInputKey === key) {
         cleanedOutputFileData[key] = outputFileData[key];
