@@ -11,58 +11,33 @@ _inputs:
   about:
     label: About
     type: textarea
-    comment: "[categories/index.html](https://app.cloudcannon.com/41142/editor#site\
-      s/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2\
-      Fcategories%2F_index.md&collection=pages),[index.html](https://app.cloudc\
-      annon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visua\
-      l&url=%2F&path=%2Fcontent%2F_index.md&collection=pages),[tags/index.html]\
-      (https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/\
-      :/edit?editor=visual&url=%2F&path=%2Fcontent%2Ftags%2F_index.md&collectio\
-      n=pages)"
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
   blog:
     label: Blog
     type: textarea
-    comment: "[categories/index.html](https://app.cloudcannon.com/41142/editor#site\
-      s/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2\
-      Fcategories%2F_index.md&collection=pages),[index.html](https://app.cloudc\
-      annon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visua\
-      l&url=%2F&path=%2Fcontent%2F_index.md&collection=pages),[tags/index.html]\
-      (https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/\
-      :/edit?editor=visual&url=%2F&path=%2Fcontent%2Ftags%2F_index.md&collectio\
-      n=pages)"
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
   contact:
     label: Contact
     type: textarea
-    comment: "[categories/index.html](https://app.cloudcannon.com/41142/editor#site\
-      s/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2\
-      Fcategories%2F_index.md&collection=pages),[index.html](https://app.cloudc\
-      annon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visua\
-      l&url=%2F&path=%2Fcontent%2F_index.md&collection=pages),[tags/index.html]\
-      (https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/\
-      :/edit?editor=visual&url=%2F&path=%2Fcontent%2Ftags%2F_index.md&collectio\
-      n=pages)"
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
   feature:
     label: Feature
     type: textarea
-    comment: "[categories/index.html](https://app.cloudcannon.com/41142/editor#site\
-      s/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2\
-      Fcategories%2F_index.md&collection=pages),[index.html](https://app.cloudc\
-      annon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visua\
-      l&url=%2F&path=%2Fcontent%2F_index.md&collection=pages),[tags/index.html]\
-      (https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/\
-      :/edit?editor=visual&url=%2F&path=%2Fcontent%2Ftags%2F_index.md&collectio\
-      n=pages)"
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
   home:
     label: Home
     type: textarea
-    comment: "[categories/index.html](https://app.cloudcannon.com/41142/editor#site\
-      s/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2\
-      Fcategories%2F_index.md&collection=pages),[index.html](https://app.cloudc\
-      annon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visua\
-      l&url=%2F&path=%2Fcontent%2F_index.md&collection=pages),[tags/index.html]\
-      (https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/\
-      :/edit?editor=visual&url=%2F&path=%2Fcontent%2Ftags%2F_index.md&collectio\
-      n=pages)"
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
   hugo-rosey-demo:
     label: Hugo Rosey Demo
     type: textarea
@@ -86,14 +61,9 @@ _inputs:
   pricing:
     label: Pricing
     type: textarea
-    comment: "[categories/index.html](https://app.cloudcannon.com/41142/editor#site\
-      s/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2\
-      Fcategories%2F_index.md&collection=pages),[index.html](https://app.cloudc\
-      annon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visua\
-      l&url=%2F&path=%2Fcontent%2F_index.md&collection=pages),[tags/index.html]\
-      (https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/\
-      :/edit?editor=visual&url=%2F&path=%2Fcontent%2Ftags%2F_index.md&collectio\
-      n=pages)"
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
   read-more:
     label: "\n      Read More\n    "
     type: textarea

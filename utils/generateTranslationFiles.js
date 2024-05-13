@@ -35,8 +35,13 @@ async function main(locale) {
       remove: '.',
     }).toLowerCase();
 
-    // Add a link for each page the translation appears on
-    const translationPages = Object.keys(inputTranslationObj.pages);
+    // Add a link for each page the translation appears on, but not tags and categories pages
+    const translationPages = Object.keys(inputTranslationObj.pages).filter(
+      (page) => {
+        return page !== 'tags/index.html' && page !== 'categories/index.html';
+      }
+    );
+
     const translationLocations = translationPages.map((page) => {
       // TODO: Add dynamic collection to editor link
       // TODO: Maybe add config file that you can set content/visual editor or live site preview for translation link
