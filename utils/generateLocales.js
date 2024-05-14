@@ -3,7 +3,7 @@ const YAML = require('yaml');
 
 let translationsDirPath = './rosey/translations';
 let localesDirPath = './rosey/locales';
-let locales = process.env.LOCALES.toLowerCase().split(',') || ['es-es'];
+let locales = process.env.LOCALES.toLowerCase().split(',');
 let localesFileData = {};
 let translationsFileData = {};
 
@@ -31,12 +31,14 @@ async function main(locale) {
     const translationEntryInputData = translationsFileData['_inputs'];
     let localesEntry = localesFileData[inputKey];
 
-    // If obj doesn't exist in our locales file, add it
-    if (inputKey !== '_inputs' && localesEntry === undefined) {
-      localesFileData[inputKey] = {
-        original: translationEntryInputData[inputKey]?.label,
-        value: translationEntry,
-      };
+    // If obj doesn't exist in our locales file or has a blank value, and isn't the inputs object, add it with the translated value
+    if (localesEntry === undefined || localesEntry.value === '') {
+      if (inputKey !== '_inputs') {
+        localesFileData[inputKey] = {
+          original: translationEntryInputData[inputKey]?.label,
+          value: translationEntry,
+        };
+      }
     }
   }
 
@@ -44,6 +46,7 @@ async function main(locale) {
   fs.writeFile(localePath, JSON.stringify(localesFileData), (err) => {
     if (err) throw err;
     console.log(localePath + ' updated succesfully');
+    // console.log('With: ', localesFileData);
   });
 }
 

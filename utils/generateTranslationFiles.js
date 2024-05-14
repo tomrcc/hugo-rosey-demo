@@ -4,7 +4,7 @@ const slugify = require('slugify');
 
 const inputFilePath = './rosey/base.json';
 const translationFilesDirPath = './rosey/translations';
-let locales = process.env.LOCALES.toLowerCase().split(',') || ['es-es'];
+let locales = process.env.LOCALES.toLowerCase().split(',');
 let outputFileData = {};
 let inputFileData = {};
 let cleanedOutputFileData = {};
