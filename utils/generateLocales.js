@@ -4,6 +4,7 @@ const YAML = require('yaml');
 let translationsDirPath = './rosey/translations';
 let localesDirPath = './rosey/locales';
 let locales = process.env.LOCALES.toLowerCase().split(',');
+// let locales = ['es-es'];
 let localesFileData = {};
 let translationsFileData = {};
 
