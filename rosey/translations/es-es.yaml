@@ -1,39 +1,45 @@
 _inputs:
-  a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannon's-build-configuration:
-    label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
-      extra setup so that we can enter translations via the CloudCannon GUI.
-      Additional languages can be set in the environment variables in
-      CloudCannon’s build configuration.
-    type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
-  about:
+  About:
     label: About
     type: textarea
     comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
       llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
       collection=pages)"
-  blog:
+  Blog:
     label: Blog
     type: textarea
     comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
       llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
       collection=pages)"
-  contact:
+  Contact:
     label: Contact
     type: textarea
     comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
       llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
       collection=pages)"
-  feature:
+  Feature:
     label: Feature
     type: textarea
     comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
       llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
       collection=pages)"
-  home:
+  Home:
     label: Home
+    type: textarea
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
+  Pricing:
+    label: Pricing
+    type: textarea
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
+  a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
+    label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
+      extra setup so that we can enter translations via the CloudCannon GUI.
+      Additional languages can be set in the environment variables in
+      CloudCannon’s build configuration.
     type: textarea
     comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
       llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
@@ -58,33 +64,34 @@ _inputs:
     comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
       llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
       collection=pages)"
-  pricing:
-    label: Pricing
-    type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
   read-more:
-    label: "\n      Read More\n    "
+    label: "\n    Read More\n  "
     type: textarea
     comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
       llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
       collection=pages)"
-a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannon's-build-configuration: >
+  site-title:
+    label: Hugo Rosey Demo
+    type: textarea
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
+About: ""
+Blog: ""
+Contact: ""
+Feature: ""
+Home: ""
+Pricing: ""
+a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
   Una demostración de cómo trabajan Hugo y Rosey en CloudCannon. Este sitio
   tiene una configuración adicional para que podamos ingresar traducciones a
   través de la GUI de CloudCannon. Se pueden configurar idiomas adicionales en
   las variables de entorno en la configuración de compilación de CloudCannon.
-about: Acerca De
-blog: Blog
-contact: Contacto
-feature: Característica
-home: Hogar
 hugo-rosey-demo: |
   Demostración de hugo rosey
 keep-what-you-need-delete-the-rest: |
   Conserva lo que necesitas. Elimina el resto.
 make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey: Conserva lo que necesitas. Elimina el resto.
-pricing: Precios
 read-more: |
   Leer más
+site-title: ""

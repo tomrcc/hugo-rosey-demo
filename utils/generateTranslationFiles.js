@@ -5,6 +5,7 @@ const slugify = require('slugify');
 const inputFilePath = './rosey/base.json';
 const translationFilesDirPath = './rosey/translations';
 let locales = process.env.LOCALES.toLowerCase().split(',');
+// let locales = ['es-es'];
 let outputFileData = {};
 let inputFileData = {};
 let cleanedOutputFileData = {};
@@ -31,10 +32,6 @@ async function main(locale) {
   for (const inputKey in inputFileData) {
     const inputTranslationObj = inputFileData[inputKey];
 
-    const slugifiedInputKey = slugify(inputTranslationObj.original, {
-      remove: '.',
-    }).toLowerCase();
-
     // Add a link for each page the translation appears on, but not tags and categories pages
     const translationPages = Object.keys(inputTranslationObj.pages).filter(
       (page) => {
@@ -57,8 +54,8 @@ async function main(locale) {
     }
 
     // Add each entry to our _inputs obj if not there already
-    if (!cleanedOutputFileData['_inputs'][slugifiedInputKey]) {
-      cleanedOutputFileData['_inputs'][slugifiedInputKey] = {
+    if (!cleanedOutputFileData['_inputs'][inputKey]) {
+      cleanedOutputFileData['_inputs'][inputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
         comment: translationLocations.join(','),
@@ -66,15 +63,15 @@ async function main(locale) {
     }
 
     // If entry doesn't exist in our output file, add it
-    if (!cleanedOutputFileData[slugifiedInputKey]) {
-      cleanedOutputFileData[slugifiedInputKey] = '';
+    if (!cleanedOutputFileData[inputKey]) {
+      cleanedOutputFileData[inputKey] = '';
     }
 
     // Only add the key to our output data if it still exists in base.json
     // If entry no longer exists in base.json we don't add it
     const outputKeys = Object.keys(outputFileData);
     outputKeys.forEach((key) => {
-      if (slugifiedInputKey === key) {
+      if (inputKey === key) {
         cleanedOutputFileData[key] = outputFileData[key];
       }
     });
