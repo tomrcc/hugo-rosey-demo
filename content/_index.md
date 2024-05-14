@@ -2,7 +2,8 @@
 title: Home
 seo:
   page_description: >-
-    A multilingual site, made using a translation workflow with Rosey in CloudCannon.
+    A multilingual site, made using a translation workflow with Rosey in
+    CloudCannon.
   canonical_url:
   featured_image:
   featured_image_alt:

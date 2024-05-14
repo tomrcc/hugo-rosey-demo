@@ -2,12 +2,16 @@
 
 npm i
 npx "@bookshop/generate"
-echo "Generating site with Rosey"
+
+echo "🌹Generating site with Rosey"
 npx rosey generate --source public
-echo "Generated a base.json from the built site"
-echo "Generating locales from base.json"
+echo "🌹Generated a base.json from the built site"
+echo "🌹Generating translation files from base.json"
+node utils/generateTranslationFiles.js
+echo "🌹Generated translation files to be edited"
+echo "🌹Generating the locales files Rosey needs from our translation files"
 node utils/generateLocales.js
-echo "Generated locales"
+echo "🌹Generated locales"
 
 if [[ $TRANSLATE == "true" ]];
 then
