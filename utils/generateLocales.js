@@ -33,11 +33,11 @@ async function main(locale) {
     let localesEntry = localesFileData[inputKey];
 
     // If obj doesn't exist in our locales file or has a blank value, and isn't the inputs object, add it with the translated value
-    if (localesEntry === undefined || localesEntry.value === '') {
+    if (localesEntry === undefined || localesEntry.value == '' || translationEntry == '') {
       if (inputKey !== '_inputs') {
         localesFileData[inputKey] = {
           original: translationEntryInputData[inputKey]?.label,
-          value: translationEntry,
+          value: translationEntry == '' ? translationEntryInputData[inputKey]?.label : translationEntry,
         };
       }
     }
@@ -47,7 +47,6 @@ async function main(locale) {
   fs.writeFile(localePath, JSON.stringify(localesFileData), (err) => {
     if (err) throw err;
     console.log(localePath + ' updated succesfully');
-    // console.log('With: ', localesFileData);
   });
 }
 
