@@ -1,4 +1,25 @@
 _inputs:
+  A demonstration of how Hugo and Rosey work in CloudCannon. This site has extra setup so that we can enter translations via the CloudCannon GUI. Additional languages can be set in the environment variables in CloudCannon's build configuration.:
+    label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
+      extra setup so that we can enter translations via the CloudCannon GUI.
+      Additional languages can be set in the environment variables in
+      CloudCannon’s build configuration.
+    type: textarea
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
+  A heading:
+    label: A heading
+    type: textarea
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages)"
+  A subheading in a new component:
+    label: A subheading in a new component
+    type: textarea
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages)"
   About:
     label: About
     type: textarea
@@ -39,6 +60,26 @@ _inputs:
       ent%2Fa-new-test-page%2F_index.md&collection=pages),[index.html](https://\
       app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?ed\
       itor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)"
+  Hugo Rosey Demo:
+    label: Hugo Rosey Demo
+    type: textarea
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
+  Keep what you need. Delete the rest.:
+    label: Keep what you need. Delete the rest.
+    type: textarea
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
+  Make your own copy of this repository. Reference it or use it as a template to get up and running with translation workflows in CloudCannon using Rosey.:
+    label: Make your own copy of this repository. Reference it or use it as a
+      template to get up and running with translation workflows in CloudCannon
+      using Rosey.
+    type: textarea
+    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
+      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
+      collection=pages)"
   Pricing:
     label: Pricing
     type: textarea
@@ -47,53 +88,12 @@ _inputs:
       ent%2Fa-new-test-page%2F_index.md&collection=pages),[index.html](https://\
       app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?ed\
       itor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)"
-  a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
-    label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
-      extra setup so that we can enter translations via the CloudCannon GUI.
-      Additional languages can be set in the environment variables in
-      CloudCannon’s build configuration.
-    type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
-  a-heading:
-    label: A heading
-    type: textarea
-    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
-      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
-      ent%2Fa-new-test-page%2F_index.md&collection=pages)"
-  a-subheading-in-a-new-component:
-    label: A subheading in a new component
-    type: textarea
-    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
-      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
-      ent%2Fa-new-test-page%2F_index.md&collection=pages)"
   button:
     label: "\n    Button\n  "
     type: textarea
     comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
       #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
       ent%2Fa-new-test-page%2F_index.md&collection=pages)"
-  hugo-rosey-demo:
-    label: Hugo Rosey Demo
-    type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
-  keep-what-you-need-delete-the-rest:
-    label: Keep what you need. Delete the rest.
-    type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
-  make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey:
-    label: Make your own copy of this repository. Reference it or use it as a
-      template to get up and running with translation workflows in CloudCannon
-      using Rosey.
-    type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
   read-more:
     label: "\n    Read More\n  "
     type: textarea
@@ -108,18 +108,18 @@ _inputs:
       ent%2Fa-new-test-page%2F_index.md&collection=pages),[index.html](https://\
       app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?ed\
       itor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)"
+A demonstration of how Hugo and Rosey work in CloudCannon. This site has extra setup so that we can enter translations via the CloudCannon GUI. Additional languages can be set in the environment variables in CloudCannon's build configuration.: ""
+A heading: ""
+A subheading in a new component: ""
 About: ""
 Blog: ""
 Contact: ""
 Feature: ""
 Home: ""
+Hugo Rosey Demo: ""
+Keep what you need. Delete the rest.: ""
+Make your own copy of this repository. Reference it or use it as a template to get up and running with translation workflows in CloudCannon using Rosey.: ""
 Pricing: ""
-a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration: ""
-a-heading: ""
-a-subheading-in-a-new-component: ""
 button: ""
-hugo-rosey-demo: ""
-keep-what-you-need-delete-the-rest: ""
-make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey: ""
 read-more: ""
 site-title: ""
