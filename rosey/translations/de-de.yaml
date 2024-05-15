@@ -147,7 +147,12 @@ Contact: ""
 Feature: ""
 Home: ""
 Pricing: ""
-a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration: ""
+a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
+  Eine Demonstration, wie Hugo und Rosey in CloudCannon arbeiten. Diese Site
+  verfügt über eine zusätzliche Einrichtung, damit wir Übersetzungen über die
+  CloudCannon-GUI eingeben können. Zusätzliche Sprachen können in den
+  Umgebungsvariablen in der Build-Konfiguration von CloudCannon festgelegt
+  werden.
 a-heading: ""
 a-second-heading: ""
 a-subheading-in-a-new-component: ""
