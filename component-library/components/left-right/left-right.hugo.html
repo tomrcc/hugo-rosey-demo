@@ -4,10 +4,10 @@
    <div class="{{ $c }}__wrapper">
       <div class="{{ $c }}__text">
          {{ with .heading }}
-            <h2 data-rosey="{{ . }}">{{ . }}</h2>
+            <h2 data-rosey="{{ . | anchorize }}">{{ . }}</h2>
          {{ end }}
          {{ with .text }}
-            <p data-rosey="{{ . }}">{{ . }}</p>
+            <p data-rosey="{{ . | anchorize }}">{{ . }}</p>
          {{ end }}
          {{ with .button }}
             {{ partial "bookshop" . }}

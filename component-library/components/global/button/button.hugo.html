@@ -6,7 +6,7 @@
     class="{{ $c }}__link"
     href="{{ .path }}"
     style="color: {{ .button_text_color }};"
-    data-rosey="{{ .button_text }}">
+    data-rosey="{{ .button_text | anchorize }}">
     {{ .button_text }}
   </a>
   {{ end}}
