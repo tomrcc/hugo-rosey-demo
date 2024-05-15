@@ -15,6 +15,7 @@ paths:
 collections_config:
   pages:
     path: content
+    url: [slug]
     output: true
     filter: strict
     icon: laptop_mac
