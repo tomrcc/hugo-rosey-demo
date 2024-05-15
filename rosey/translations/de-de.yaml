@@ -36,6 +36,12 @@ _inputs:
       ent%2Fa-new-test-page%2F_index.md&collection=pages),[index.html](https://\
       app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?ed\
       itor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)"
+  Button:
+    label: "\n    Button\n  "
+    type: textarea
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages)"
   Contact:
     label: Contact
     type: textarea
@@ -88,13 +94,7 @@ _inputs:
       ent%2Fa-new-test-page%2F_index.md&collection=pages),[index.html](https://\
       app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?ed\
       itor=visual&url=%2F&path=%2Fcontent%2F_index.md&collection=pages)"
-  button:
-    label: "\n    Button\n  "
-    type: textarea
-    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
-      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
-      ent%2Fa-new-test-page%2F_index.md&collection=pages)"
-  read-more:
+  Read More:
     label: "\n    Read More\n  "
     type: textarea
     comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
@@ -113,6 +113,7 @@ A heading: ""
 A subheading in a new component: ""
 About: ""
 Blog: ""
+Button: ""
 Contact: ""
 Feature: ""
 Home: ""
@@ -120,6 +121,5 @@ Hugo Rosey Demo: ""
 Keep what you need. Delete the rest.: ""
 Make your own copy of this repository. Reference it or use it as a template to get up and running with translation workflows in CloudCannon using Rosey.: ""
 Pricing: ""
-button: ""
-read-more: ""
+Read More: ""
 site-title: ""
