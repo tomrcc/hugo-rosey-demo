@@ -73,7 +73,7 @@ _inputs:
     comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
       llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
       collection=pages)"
-  a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
+  a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon.-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui.-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration.:
     label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
       extra setup so that we can enter translations via the CloudCannon GUI.
       Additional languages can be set in the environment variables in
@@ -118,7 +118,7 @@ Keep what you need. Delete the rest.: ""
 Make your own copy of this repository. Reference it or use it as a template to get up and running with translation workflows in CloudCannon using Rosey.: ""
 Pricing: ""
 Read More: ""
-a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration: ""
+a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon.-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui.-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration.: ""
 a-heading: ""
 a-subheading-in-a-new-component: ""
 hugo-rosey-demo: ""
