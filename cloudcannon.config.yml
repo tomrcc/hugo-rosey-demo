@@ -23,6 +23,10 @@ collections_config:
     schemas:
       default:
         path: schemas/page.md
+    add_options:
+      - name: Add Page
+        editor: visual
+        schema: default
   data:
     path: data
     output: false
