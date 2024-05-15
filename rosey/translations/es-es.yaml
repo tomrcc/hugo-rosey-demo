@@ -2,39 +2,69 @@ _inputs:
   About:
     label: About
     type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages),[another-new-page/ind\
+      ex.html](https://app.cloudcannon.com/41142/editor#sites/125080/collection\
+      s/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2Fanother-new-page%2\
+      F_index.md&collection=pages),[index.html](https://app.cloudcannon.com/411\
+      42/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&pat\
+      h=%2Fcontent%2F_index.md&collection=pages)"
   Blog:
     label: Blog
     type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages),[another-new-page/ind\
+      ex.html](https://app.cloudcannon.com/41142/editor#sites/125080/collection\
+      s/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2Fanother-new-page%2\
+      F_index.md&collection=pages),[index.html](https://app.cloudcannon.com/411\
+      42/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&pat\
+      h=%2Fcontent%2F_index.md&collection=pages)"
   Contact:
     label: Contact
     type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages),[another-new-page/ind\
+      ex.html](https://app.cloudcannon.com/41142/editor#sites/125080/collection\
+      s/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2Fanother-new-page%2\
+      F_index.md&collection=pages),[index.html](https://app.cloudcannon.com/411\
+      42/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&pat\
+      h=%2Fcontent%2F_index.md&collection=pages)"
   Feature:
     label: Feature
     type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages),[another-new-page/ind\
+      ex.html](https://app.cloudcannon.com/41142/editor#sites/125080/collection\
+      s/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2Fanother-new-page%2\
+      F_index.md&collection=pages),[index.html](https://app.cloudcannon.com/411\
+      42/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&pat\
+      h=%2Fcontent%2F_index.md&collection=pages)"
   Home:
     label: Home
     type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages),[another-new-page/ind\
+      ex.html](https://app.cloudcannon.com/41142/editor#sites/125080/collection\
+      s/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2Fanother-new-page%2\
+      F_index.md&collection=pages),[index.html](https://app.cloudcannon.com/411\
+      42/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&pat\
+      h=%2Fcontent%2F_index.md&collection=pages)"
   Pricing:
     label: Pricing
     type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages),[another-new-page/ind\
+      ex.html](https://app.cloudcannon.com/41142/editor#sites/125080/collection\
+      s/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2Fanother-new-page%2\
+      F_index.md&collection=pages),[index.html](https://app.cloudcannon.com/411\
+      42/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&pat\
+      h=%2Fcontent%2F_index.md&collection=pages)"
   a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
     label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
       extra setup so that we can enter translations via the CloudCannon GUI.
@@ -44,6 +74,36 @@ _inputs:
     comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
       llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
       collection=pages)"
+  a-heading:
+    label: A heading
+    type: textarea
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages)"
+  a-second-heading:
+    label: A second heading
+    type: textarea
+    comment: "[another-new-page/index.html](https://app.cloudcannon.com/41142/edito\
+      r#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcon\
+      tent%2Fanother-new-page%2F_index.md&collection=pages)"
+  a-subheading-in-a-new-component:
+    label: A subheading in a new component
+    type: textarea
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages)"
+  button:
+    label: "\n    Button\n  "
+    type: textarea
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages)"
+  does-this-wipe-everything-in-the-translations-file:
+    label: Does this wipe everything in the translations file?
+    type: textarea
+    comment: "[another-new-page/index.html](https://app.cloudcannon.com/41142/edito\
+      r#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcon\
+      tent%2Fanother-new-page%2F_index.md&collection=pages)"
   hugo-rosey-demo:
     label: Hugo Rosey Demo
     type: textarea
@@ -73,25 +133,31 @@ _inputs:
   site-title:
     label: Hugo Rosey Demo
     type: textarea
-    comment: "[index.html](https://app.cloudcannon.com/41142/editor#sites/125080/co\
-      llections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F_index.md&\
-      collection=pages)"
+    comment: "[a-new-test-page/index.html](https://app.cloudcannon.com/41142/editor\
+      #sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcont\
+      ent%2Fa-new-test-page%2F_index.md&collection=pages),[another-new-page/ind\
+      ex.html](https://app.cloudcannon.com/41142/editor#sites/125080/collection\
+      s/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2Fanother-new-page%2\
+      F_index.md&collection=pages),[index.html](https://app.cloudcannon.com/411\
+      42/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&pat\
+      h=%2Fcontent%2F_index.md&collection=pages)"
 About: ""
 Blog: ""
 Contact: ""
 Feature: ""
 Home: ""
 Pricing: ""
-a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
-  Una demostración de cómo trabajan Hugo y Rosey en CloudCannon. Este sitio
-  tiene una configuración adicional para que podamos ingresar traducciones a
-  través de la GUI de CloudCannon. Se pueden configurar idiomas adicionales en
-  las variables de entorno en la configuración de compilación de CloudCannon.
-hugo-rosey-demo: |
-  Demostración de hugo rosey
-keep-what-you-need-delete-the-rest: |
-  Conserva lo que necesitas. Elimina el resto.
-make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey: Conserva lo que necesitas. Elimina el resto.
-read-more: |
-  Leer más
+a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration: |-
+  Do we lose all the translations when we create a new page?
+  Or was that all the drama with anchorize?
+a-heading: ""
+a-second-heading: Looks like it was the drama with ånchorize, meaning we don't
+  have to worry too about errthing getting wiped
+a-subheading-in-a-new-component: A different spanish subheading to the english version
+button: ""
+does-this-wipe-everything-in-the-translations-file: Kind of looked that way?
+hugo-rosey-demo: ""
+keep-what-you-need-delete-the-rest: ""
+make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey: ""
+read-more: ""
 site-title: ""
