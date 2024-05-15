@@ -1,6 +1,30 @@
 {
   "version": 2,
   "keys": {
+    "A demonstration of how Hugo and Rosey work in CloudCannon. This site has extra setup so that we can enter translations via the CloudCannon GUI. Additional languages can be set in the environment variables in CloudCannon’s build configuration.": {
+      "original": "A demonstration of how Hugo and Rosey work in CloudCannon. This site has extra setup so that we can enter translations via the CloudCannon GUI. Additional languages can be set in the environment variables in CloudCannon’s build configuration.",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "A heading": {
+      "original": "A heading",
+      "value": null,
+      "pages": {
+        "a-new-test-page/index.html": 1
+      },
+      "total": 1
+    },
+    "A subheading in a new component": {
+      "original": "A subheading in a new component",
+      "value": null,
+      "pages": {
+        "a-new-test-page/index.html": 1
+      },
+      "total": 1
+    },
     "About": {
       "original": "About",
       "value": null,
@@ -64,6 +88,14 @@
       },
       "total": 8
     },
+    "Hugo Rosey Demo": {
+      "original": "Hugo Rosey Demo",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "Keep what you need. Delete the rest.": {
       "original": "Keep what you need. Delete the rest.",
       "value": null,
@@ -98,38 +130,6 @@
         "index.html": 2
       },
       "total": 2
-    },
-    "a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon.-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui.-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration.": {
-      "original": "A demonstration of how Hugo and Rosey work in CloudCannon. This site has extra setup so that we can enter translations via the CloudCannon GUI. Additional languages can be set in the environment variables in CloudCannon’s build configuration.",
-      "value": null,
-      "pages": {
-        "index.html": 1
-      },
-      "total": 1
-    },
-    "a-heading": {
-      "original": "A heading",
-      "value": null,
-      "pages": {
-        "a-new-test-page/index.html": 1
-      },
-      "total": 1
-    },
-    "a-subheading-in-a-new-component": {
-      "original": "A subheading in a new component",
-      "value": null,
-      "pages": {
-        "a-new-test-page/index.html": 1
-      },
-      "total": 1
-    },
-    "hugo-rosey-demo": {
-      "original": "Hugo Rosey Demo",
-      "value": null,
-      "pages": {
-        "index.html": 1
-      },
-      "total": 1
     },
     "site-title": {
       "original": "Hugo Rosey Demo",
