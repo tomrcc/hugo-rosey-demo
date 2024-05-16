@@ -20,7 +20,8 @@ async function main(locale) {
     console.log(`${translationsPath} does not exist`);
   }
   if (fs.existsSync(localePath)) {
-    localesFileData = JSON.parse(fs.readFileSync(localePath));
+    // localesFileData = JSON.parse(fs.readFileSync(localePath));
+    localesFileData = {};
   } else {
     console.log(`${localePath} does not exist, creating one now`);
     fs.writeFileSync(localePath, JSON.stringify({}));
@@ -30,16 +31,16 @@ async function main(locale) {
   for (const inputKey in translationsFileData) {
     const translationEntry = translationsFileData[inputKey];
     const translationEntryInputData = translationsFileData['_inputs'];
-    let localesEntry = localesFileData[inputKey];
 
     // If obj doesn't exist in our locales file or has a blank value, and isn't the inputs object, add it with the translated value
-    if (localesEntry === undefined || localesEntry.value == '' || translationEntry == '') {
-      if (inputKey !== '_inputs') {
-        localesFileData[inputKey] = {
-          original: translationEntryInputData[inputKey]?.label,
-          value: translationEntry == '' ? translationEntryInputData[inputKey]?.label : translationEntry,
-        };
-      }
+    if (inputKey !== '_inputs') {
+      localesFileData[inputKey] = {
+        original: translationEntryInputData[inputKey]?.label,
+        value:
+          translationEntry == ''
+            ? translationEntryInputData[inputKey]?.label
+            : translationEntry,
+      };
     }
   }
 
