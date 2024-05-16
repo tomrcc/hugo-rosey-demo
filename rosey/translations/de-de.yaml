@@ -14,6 +14,7 @@ _inputs:
             - button
             - does-this-wipe-everything-in-the-translations-file
             - hugo-rosey-demo-changed
+            - keep-what-you-need-delete-the-rest-changed
             - make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey
             - read-more
             - site-title
@@ -27,7 +28,6 @@ _inputs:
             - Home
             - Pricing
             - a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration
-            - keep-what-you-need-delete-the-rest
   About:
     label: About
     type: text
@@ -130,11 +130,11 @@ _inputs:
     type: textarea
     comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Hugo%\
       20Rosey%20Demo%20Changed)"
-  keep-what-you-need-delete-the-rest:
-    label: Keep what you need. Delete the rest.
+  keep-what-you-need-delete-the-rest-changed:
+    label: Keep what you need. Delete the rest. CHANGED
     type: textarea
     comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Keep%\
-      20what%20you%20need.%20Delete%20the%20rest.)"
+      20what%20you%20need.%20Delete%20the%20rest.%20CHANGED)"
   make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey:
     label: Make your own copy of this repository. Reference it or use it as a
       template to get up and running with translation workflows in CloudCannon
@@ -178,7 +178,7 @@ a-subheading-in-a-new-component: ""
 button: ""
 does-this-wipe-everything-in-the-translations-file: ""
 hugo-rosey-demo-changed: ""
-keep-what-you-need-delete-the-rest: Behalten Sie, was Sie brauchen. Den Rest löschen.
+keep-what-you-need-delete-the-rest-changed: ""
 make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey: ""
 read-more: ""
 site-title: ""
