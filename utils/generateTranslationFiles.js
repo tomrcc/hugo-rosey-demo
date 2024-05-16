@@ -41,6 +41,7 @@ async function main(locale) {
 
   for (const inputKey in inputFileData) {
     const inputTranslationObj = inputFileData[inputKey];
+    const originalPhrase = inputTranslationObj.original;
 
     // Only add the key to our output data if it still exists in base.json
     // If entry no longer exists in base.json we don't add it
@@ -71,7 +72,7 @@ async function main(locale) {
           : page.replace('/index.html', '').replaceAll('-', ' ');
       const pageNameCapitalised = pageName[0].toUpperCase() + pageName.slice(1);
       const pagePath = page.replace('/index.html', '/');
-      return `[${pageNameCapitalised}](${baseURL}${pagePath})`;
+      return `[${pageNameCapitalised}](${baseURL}${pagePath}#:~:text=${originalPhrase})`;
     });
 
     // Create the inputs obj if there is none
@@ -102,11 +103,10 @@ async function main(locale) {
     }
 
     // Add each entry to our _inputs obj - no need to preserve these between translations
-    const label = inputTranslationObj.original;
     const inputType = label.length < 20 ? 'text' : 'textarea';
 
     cleanedOutputFileData['_inputs'][inputKey] = {
-      label: label,
+      label: originalPhrase,
       type: inputType,
       comment: translationLocations.join(' | '),
     };
