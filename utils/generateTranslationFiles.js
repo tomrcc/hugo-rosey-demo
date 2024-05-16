@@ -1,6 +1,5 @@
-// TODO: Group translated and untranslated text with object groups using the $ syntax in _inputs
-// TODO: If label is under 20 characters in length, make the input a text input instead of textarea
-// TODO: probably didn't update the inputs properly, because we only make them once unless they change
+// TODO: Figure out why highlight doesn't work in markdown links?
+// TODO: Why does changing
 
 const fs = require('file-system');
 const YAML = require('yaml');
@@ -36,7 +35,7 @@ async function main(locale) {
     );
   } else {
     console.log(`${translationFilePath} does not exist, creating one now`);
-    fs.writeFileSync(translationFilePath, '_inputs: {}');
+    await fs.writeFileSync(translationFilePath, '_inputs: {}');
   }
 
   for (const inputKey in inputFileData) {
@@ -129,7 +128,7 @@ async function main(locale) {
     }
   }
 
-  fs.writeFileSync(
+  await fs.writeFileSync(
     translationFilePath,
     YAML.stringify(cleanedOutputFileData),
     (err) => {
