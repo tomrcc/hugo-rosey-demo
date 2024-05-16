@@ -5,73 +5,61 @@
       "original": "About",
       "value": null,
       "pages": {
-        "a-new-test-page/index.html": 2,
-        "another-new-page/index.html": 2,
         "categories/index.html": 2,
         "index.html": 2,
         "tags/index.html": 2
       },
-      "total": 10
+      "total": 6
     },
     "Blog": {
       "original": "Blog",
       "value": null,
       "pages": {
-        "a-new-test-page/index.html": 2,
-        "another-new-page/index.html": 2,
         "categories/index.html": 2,
         "index.html": 2,
         "tags/index.html": 2
       },
-      "total": 10
+      "total": 6
     },
     "Contact": {
       "original": "Contact",
       "value": null,
       "pages": {
-        "a-new-test-page/index.html": 2,
-        "another-new-page/index.html": 2,
         "categories/index.html": 2,
         "index.html": 2,
         "tags/index.html": 2
       },
-      "total": 10
+      "total": 6
     },
     "Feature": {
       "original": "Feature",
       "value": null,
       "pages": {
-        "a-new-test-page/index.html": 2,
-        "another-new-page/index.html": 2,
         "categories/index.html": 2,
         "index.html": 2,
         "tags/index.html": 2
       },
-      "total": 10
+      "total": 6
     },
     "Home": {
       "original": "Home",
       "value": null,
       "pages": {
-        "a-new-test-page/index.html": 2,
-        "another-new-page/index.html": 2,
         "categories/index.html": 2,
         "index.html": 2,
         "tags/index.html": 2
       },
-      "total": 10
+      "total": 6
     },
     "Pricing": {
       "original": "Pricing",
       "value": null,
       "pages": {
-        "a-new-test-page/index.html": 2,
-        "another-new-page/index.html": 2,
         "categories/index.html": 2,
         "index.html": 2,
         "tags/index.html": 2
       },
-      "total": 10
+      "total": 6
     },
     "a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration": {
       "original": "A demonstration of how Hugo and Rosey work in CloudCannon. This site has extra setup so that we can enter translations via the CloudCannon GUI. Additional languages can be set in the environment variables in CloudCannon’s build configuration.",
@@ -81,48 +69,8 @@
       },
       "total": 1
     },
-    "a-heading": {
-      "original": "A heading",
-      "value": null,
-      "pages": {
-        "a-new-test-page/index.html": 1
-      },
-      "total": 1
-    },
-    "a-second-heading": {
-      "original": "A second heading",
-      "value": null,
-      "pages": {
-        "another-new-page/index.html": 1
-      },
-      "total": 1
-    },
-    "a-subheading-in-a-new-component": {
-      "original": "A subheading in a new component",
-      "value": null,
-      "pages": {
-        "a-new-test-page/index.html": 1
-      },
-      "total": 1
-    },
-    "button": {
-      "original": "\n    Button\n  ",
-      "value": null,
-      "pages": {
-        "a-new-test-page/index.html": 1
-      },
-      "total": 1
-    },
-    "does-this-wipe-everything-in-the-translations-file": {
-      "original": "Does this wipe everything in the translations file?",
-      "value": null,
-      "pages": {
-        "another-new-page/index.html": 1
-      },
-      "total": 1
-    },
-    "hugo-rosey-demo-changed": {
-      "original": "Hugo Rosey Demo Changed",
+    "hugo-rosey-demo": {
+      "original": "Hugo Rosey Demo",
       "value": null,
       "pages": {
         "index.html": 1
@@ -157,13 +105,11 @@
       "original": "Hugo Rosey Demo",
       "value": null,
       "pages": {
-        "a-new-test-page/index.html": 1,
-        "another-new-page/index.html": 1,
         "categories/index.html": 1,
         "index.html": 1,
         "tags/index.html": 1
       },
-      "total": 5
+      "total": 3
     }
   }
 }
