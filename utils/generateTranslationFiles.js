@@ -1,12 +1,15 @@
+// TODO: Group translated and untranslated text with object groups using the $ syntax in _inputs
+// TODO: If label is under 20 characters in length, make the input a text input instead of textarea
+// TODO: probably didn't update the inputs properly, because we only make them once unless they change
+
 const fs = require('file-system');
 const YAML = require('yaml');
 const slugify = require('slugify');
 
 const inputFilePath = './rosey/base.json';
 const translationFilesDirPath = './rosey/translations';
-const baseURL = process.env.BASEURL;
-let locales = process.env.LOCALES.toLowerCase().split(',');
-// let locales = ['es-es'];
+const baseURL = process.env.BASEURL || 'http://localhost:1313/';
+let locales = process.env.LOCALES?.toLowerCase().split(',') || ['es-es'];
 let outputFileData = {};
 let inputFileData = {};
 let cleanedOutputFileData = {};
@@ -33,45 +36,6 @@ async function main(locale) {
   for (const inputKey in inputFileData) {
     const inputTranslationObj = inputFileData[inputKey];
 
-    // Add a link for each page the translation appears on, but not tags and categories pages
-    const translationPages = Object.keys(inputTranslationObj.pages).filter(
-      (page) => {
-        return page !== 'tags/index.html' && page !== 'categories/index.html';
-      }
-    );
-
-    const translationLocations = translationPages.map((page) => {
-      // TODO: Add dynamic collection to editor link
-      // TODO: Maybe add config file that you can set content/visual editor or live site preview for translation link
-      // return `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F${page
-      //   .replace('index', '_index')
-      //   .replace('/', '%2F')
-      //   .replace('.html', '.md')}&collection=pages)`;
-      const pageName =
-        page === 'index.html' ? 'Homepage' : page.replace('/index.html', '');
-      const pagePath = page.replace('/index.html', '/');
-      return `[${pageName}](${baseURL}/${pagePath})`;
-    });
-
-    // If no inputs obj exists, create one
-    if (!cleanedOutputFileData['_inputs']) {
-      cleanedOutputFileData['_inputs'] = {};
-    }
-
-    // Add each entry to our _inputs obj if not there already
-    if (!cleanedOutputFileData['_inputs'][inputKey]) {
-      cleanedOutputFileData['_inputs'][inputKey] = {
-        label: inputTranslationObj.original,
-        type: 'textarea',
-        comment: translationLocations.join(','),
-      };
-    }
-
-    // If entry doesn't exist in our output file, add it
-    if (!cleanedOutputFileData[inputKey]) {
-      cleanedOutputFileData[inputKey] = '';
-    }
-
     // Only add the key to our output data if it still exists in base.json
     // If entry no longer exists in base.json we don't add it
     const outputKeys = Object.keys(outputFileData);
@@ -80,6 +44,40 @@ async function main(locale) {
         cleanedOutputFileData[key] = outputFileData[key];
       }
     });
+
+    // Add a link for each page the translation appears on, but not tags and categories pages
+    const translationPages = Object.keys(inputTranslationObj.pages).filter(
+      (page) => {
+        return page !== 'tags/index.html' && page !== 'categories/index.html';
+      }
+    );
+
+    // Get the locations of where a translation is mentioned
+    const translationLocations = translationPages.map((page) => {
+      const pageName =
+        page === 'index.html' ? 'Homepage' : page.replace('/index.html', '');
+      const pagePath = page.replace('/index.html', '/');
+      return `[${pageName}](${baseURL}${pagePath})`;
+    });
+
+    // Create the inputs obj if there is none
+    if (!cleanedOutputFileData['_inputs']) {
+      cleanedOutputFileData['_inputs'] = {};
+    }
+    // Add each entry to our _inputs obj - no need to preserve these between translations
+    const label = inputTranslationObj.original;
+    const inputType = label.length < 20 ? 'text' : 'textarea';
+    console.log(inputType);
+    cleanedOutputFileData['_inputs'][inputKey] = {
+      label: label,
+      type: inputType,
+      comment: translationLocations.join(' | '),
+    };
+
+    // If entry doesn't exist in our output file, add it
+    if (!cleanedOutputFileData[inputKey]) {
+      cleanedOutputFileData[inputKey] = '';
+    }
   }
 
   fs.writeFile(
