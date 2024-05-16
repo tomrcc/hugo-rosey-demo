@@ -7,7 +7,9 @@ _inputs:
       groups:
         - heading: Untranslated
           comment: Content to be translated
-          inputs: []
+          inputs:
+            - test-richardson-here
+            - this-is-a-new-hero-for-testing-purposes
         - heading: Translated
           comment: Content already translated
           inputs:
@@ -26,27 +28,33 @@ _inputs:
   About:
     label: About
     type: text
-    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=About)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=About)
+      | [Test](https://moving-mule.cloudvent.net/test#:~:text=About)"
   Blog:
     label: Blog
     type: text
-    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Blog)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Blog)
+      | [Test](https://moving-mule.cloudvent.net/test#:~:text=Blog)"
   Contact:
     label: Contact
     type: text
-    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Contact)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Conta\
+      ct) | [Test](https://moving-mule.cloudvent.net/test#:~:text=Contact)"
   Feature:
     label: Feature
     type: text
-    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Feature)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Featu\
+      re) | [Test](https://moving-mule.cloudvent.net/test#:~:text=Feature)"
   Home:
     label: Home
     type: text
-    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Home)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Home)
+      | [Test](https://moving-mule.cloudvent.net/test#:~:text=Home)"
   Pricing:
     label: Pricing
     type: text
-    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Pricing)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Prici\
+      ng) | [Test](https://moving-mule.cloudvent.net/test#:~:text=Pricing)"
   a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
     label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
       extra setup so that we can enter translations via the CloudCannon GUI.
@@ -89,7 +97,19 @@ _inputs:
     label: Hugo Rosey Demo
     type: text
     comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Hugo%\
-      20Rosey%20Demo)"
+      20Rosey%20Demo) |
+      [Test](https://moving-mule.cloudvent.net/test#:~:text=Hugo%20Rosey%20Demo\
+      )"
+  test-richardson-here:
+    label: Test richardson here
+    type: textarea
+    comment: "[Test](https://moving-mule.cloudvent.net/test#:~:text=Test%20richards\
+      on%20here)"
+  this-is-a-new-hero-for-testing-purposes:
+    label: This is a new hero for testing purposes
+    type: textarea
+    comment: "[Test](https://moving-mule.cloudvent.net/test#:~:text=This%20is%20a%2\
+      0new%20hero%20for%20testing%20purposes)"
 Blog: Blog
 Contact: Contacto
 Feature: Característica
@@ -108,3 +128,5 @@ make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-ge
   usando Rosey.
 read-more: Leer más
 site-title: Demostración de Hugo Rosey
+test-richardson-here: ""
+this-is-a-new-hero-for-testing-purposes: ""
