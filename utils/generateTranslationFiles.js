@@ -71,7 +71,7 @@ async function main(locale) {
           ? 'Homepage'
           : page.replace('/index.html', '').replaceAll('-', ' ');
       const pageNameCapitalised = pageName[0].toUpperCase() + pageName.slice(1);
-      const pagePath = page.replace('/index.html', '/');
+      const pagePath = page.replace('/index.html', '');
       return `[${pageNameCapitalised}](${baseURL}${pagePath}#:~:text=${originalPhrase})`;
     });
 
