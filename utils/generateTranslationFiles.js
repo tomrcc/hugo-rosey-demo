@@ -60,10 +60,14 @@ async function main(locale) {
       return `[${pageName}](${baseURL}${pagePath})`;
     });
 
+    // Create the inputs obj if there is none
+    if (!cleanedOutputFileData['_inputs']) {
+      cleanedOutputFileData['_inputs'] = {};
+    }
     // Add each entry to our _inputs obj - no need to preserve these between translations
-    cleanedOutputFileData['_inputs'] = {};
     const label = inputTranslationObj.original;
-    const inputType = label.length > 20 ? 'textarea' : 'text';
+    const inputType = label.length < 20 ? 'text' : 'textarea';
+    console.log(inputType);
     cleanedOutputFileData['_inputs'][inputKey] = {
       label: label,
       type: inputType,
