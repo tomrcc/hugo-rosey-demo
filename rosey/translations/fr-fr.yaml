@@ -6,6 +6,34 @@ _inputs:
     comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
       | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
       | [Homepage](https://moving-mule.cloudvent.net/index.html)"
+  $:
+    type: object
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Untranslated
+          comment: Content to be translated
+          inputs:
+            - About
+            - Blog
+            - Contact
+            - Feature
+            - Home
+            - Pricing
+            - a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration
+            - a-heading
+            - a-second-heading
+            - a-subheading-in-a-new-component
+            - button
+            - does-this-wipe-everything-in-the-translations-file
+            - hugo-rosey-demo
+            - keep-what-you-need-delete-the-rest
+            - make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey
+            - read-more
+            - site-title
+        - heading: Translated
+          comment: Content already translated
+          inputs: []
   Blog:
     label: Blog
     type: text
