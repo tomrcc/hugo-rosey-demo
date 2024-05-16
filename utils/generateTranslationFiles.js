@@ -107,10 +107,7 @@ async function main(locale) {
       cleanedOutputFileData['_inputs']['$'].options.groups[0].inputs;
     const TranslatedPageGroup =
       cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs;
-    if (
-      !cleanedOutputFileData[inputKey] ||
-      cleanedOutputFileData[inputKey].length > 0
-    ) {
+    if (cleanedOutputFileData[inputKey].length > 0) {
       unTranslatedPageGroup.push(inputKey);
     } else {
       TranslatedPageGroup.push(inputKey);
