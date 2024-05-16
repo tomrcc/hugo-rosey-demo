@@ -1,4 +1,5 @@
 ---
+_schema: default
 title: Home
 seo:
   page_description: >-
@@ -12,7 +13,7 @@ seo:
   no_index: false
 content_blocks:
   - _bookshop_name: hero
-    heading: Hugo Rosey Demo
+    heading: Hugo Rosey Demo Changed
     text: >-
       A demonstration of how Hugo and Rosey work in CloudCannon. This site has
       extra setup so that we can enter translations via the CloudCannon GUI.
