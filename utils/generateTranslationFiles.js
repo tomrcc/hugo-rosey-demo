@@ -9,25 +9,31 @@ const slugify = require('slugify');
 const inputFilePath = './rosey/base.json';
 const translationFilesDirPath = './rosey/translations';
 const baseURL = process.env.BASEURL || 'http://localhost:1313/';
-let locales = process.env.LOCALES?.toLowerCase().split(',') || ['es-es'];
-let outputFileData = {};
-let inputFileData = {};
-let cleanedOutputFileData = {};
+let locales = process.env.LOCALES?.toLowerCase().split(',') || [
+  'es-es',
+  'de-de',
+  'fr-fr',
+];
 
 async function main(locale) {
   // Find the translation file path
   const translationFilePath = translationFilesDirPath + '/' + locale + '.yaml';
+  let outputFileData = {};
+  let inputFileData = {};
+  let cleanedOutputFileData = {};
 
   // Get the Rosey generated data
   if (fs.existsSync(inputFilePath)) {
-    inputFileData = JSON.parse(fs.readFileSync(inputFilePath)).keys;
+    inputFileData = await JSON.parse(fs.readFileSync(inputFilePath)).keys;
   } else {
     console.log('rosey/base.json does not exist');
   }
 
   // Get our old translations file
   if (fs.existsSync(translationFilePath)) {
-    outputFileData = YAML.parse(fs.readFileSync(translationFilePath, 'utf8'));
+    outputFileData = await YAML.parse(
+      fs.readFileSync(translationFilePath, 'utf8')
+    );
   } else {
     console.log(`${translationFilePath} does not exist, creating one now`);
     fs.writeFileSync(translationFilePath, '_inputs: {}');
@@ -69,15 +75,6 @@ async function main(locale) {
     if (!cleanedOutputFileData['_inputs']) {
       cleanedOutputFileData['_inputs'] = {};
     }
-    // Add each entry to our _inputs obj - no need to preserve these between translations
-    const label = inputTranslationObj.original;
-    const inputType = label.length < 20 ? 'text' : 'textarea';
-
-    cleanedOutputFileData['_inputs'][inputKey] = {
-      label: label,
-      type: inputType,
-      comment: translationLocations.join(' | '),
-    };
 
     // Create the page input object
     if (!cleanedOutputFileData['_inputs']['$']) {
@@ -100,6 +97,17 @@ async function main(locale) {
         },
       };
     }
+
+    // Add each entry to our _inputs obj - no need to preserve these between translations
+    const label = inputTranslationObj.original;
+    const inputType = label.length < 20 ? 'text' : 'textarea';
+
+    cleanedOutputFileData['_inputs'][inputKey] = {
+      label: label,
+      type: inputType,
+      comment: translationLocations.join(' | '),
+    };
+
     // Add each entry to page object group depending on whether they are translated or not
     // if translation key is an empty string, or is not yet in the output file add it to untranslated
     // else add it to translated
@@ -109,18 +117,16 @@ async function main(locale) {
     const translatedPageGroup =
       cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs;
 
-    // console.log(cleanedOutputFileData[inputKey].length > 0);
-
     if (cleanedOutputFileData[inputKey].length > 0) {
-      console.log('translated', inputKey);
+      console.log('translated', cleanedOutputFileData[inputKey]);
       translatedPageGroup.push(inputKey);
     } else {
-      console.log('untranslated', inputKey);
+      console.log('untranslated', cleanedOutputFileData[inputKey]);
       unTranslatedPageGroup.push(inputKey);
     }
   }
 
-  fs.writeFile(
+  fs.writeFileSync(
     translationFilePath,
     YAML.stringify(cleanedOutputFileData),
     (err) => {
