@@ -103,17 +103,17 @@ async function main(locale) {
     // Add each entry to page object group depending on whether they are translated or not
     // if translation key is an empty string, or is not yet in the output file add it to untranslated
     // else add it to translated
+    const unTranslatedPageGroup =
+      cleanedOutputFileData['_inputs']['$'].options.groups[0].inputs;
+    const TranslatedPageGroup =
+      cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs;
     if (
       !cleanedOutputFileData[inputKey] ||
-      cleanedOutputFileData[inputKey] === ''
+      cleanedOutputFileData[inputKey].length > 0
     ) {
-      cleanedOutputFileData['_inputs']['$'].options.groups[0].inputs.push(
-        inputKey
-      );
+      unTranslatedPageGroup.push(inputKey);
     } else {
-      cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs.push(
-        inputKey
-      );
+      TranslatedPageGroup.push(inputKey);
     }
   }
 
