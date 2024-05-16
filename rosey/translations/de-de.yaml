@@ -18,11 +18,6 @@ _inputs:
             - Home
             - Pricing
             - a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration
-            - a-heading
-            - a-second-heading
-            - a-subheading-in-a-new-component
-            - button
-            - does-this-wipe-everything-in-the-translations-file
             - hugo-rosey-demo-changed
             - keep-what-you-need-delete-the-rest-changed
             - make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey
@@ -31,54 +26,27 @@ _inputs:
   About:
     label: About
     type: text
-    comment: "[A new test
-      page](https://moving-mule.cloudvent.net/a-new-test-page#:~:text=About) |
-      [Another new
-      page](https://moving-mule.cloudvent.net/another-new-page#:~:text=About) |
-      [Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=About)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=About)"
   Blog:
     label: Blog
     type: text
-    comment: "[A new test
-      page](https://moving-mule.cloudvent.net/a-new-test-page#:~:text=Blog) |
-      [Another new
-      page](https://moving-mule.cloudvent.net/another-new-page#:~:text=Blog) |
-      [Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Blog)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Blog)"
   Contact:
     label: Contact
     type: text
-    comment: "[A new test
-      page](https://moving-mule.cloudvent.net/a-new-test-page#:~:text=Contact) |
-      [Another new
-      page](https://moving-mule.cloudvent.net/another-new-page#:~:text=Contact)
-      |
-      [Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Contact)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Contact)"
   Feature:
     label: Feature
     type: text
-    comment: "[A new test
-      page](https://moving-mule.cloudvent.net/a-new-test-page#:~:text=Feature) |
-      [Another new
-      page](https://moving-mule.cloudvent.net/another-new-page#:~:text=Feature)
-      |
-      [Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Feature)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Feature)"
   Home:
     label: Home
     type: text
-    comment: "[A new test
-      page](https://moving-mule.cloudvent.net/a-new-test-page#:~:text=Home) |
-      [Another new
-      page](https://moving-mule.cloudvent.net/another-new-page#:~:text=Home) |
-      [Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Home)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Home)"
   Pricing:
     label: Pricing
     type: text
-    comment: "[A new test
-      page](https://moving-mule.cloudvent.net/a-new-test-page#:~:text=Pricing) |
-      [Another new
-      page](https://moving-mule.cloudvent.net/another-new-page#:~:text=Pricing)
-      |
-      [Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Pricing)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Pricing)"
   a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
     label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
       extra setup so that we can enter translations via the CloudCannon GUI.
@@ -91,40 +59,6 @@ _inputs:
       lations%20via%20the%20CloudCannon%20GUI.%20Additional%20languages%20can%2\
       0be%20set%20in%20the%20environment%20variables%20in%20CloudCannon’s%20bui\
       ld%20configuration.)"
-  a-heading:
-    label: A heading
-    type: text
-    comment: "[A new test
-      page](https://moving-mule.cloudvent.net/a-new-test-page#:~:text=A%20headi\
-      ng)"
-  a-second-heading:
-    label: A second heading
-    type: text
-    comment: "[Another new
-      page](https://moving-mule.cloudvent.net/another-new-page#:~:text=A%20seco\
-      nd%20heading)"
-  a-subheading-in-a-new-component:
-    label: A subheading in a new component
-    type: textarea
-    comment: "[A new test
-      page](https://moving-mule.cloudvent.net/a-new-test-page#:~:text=A%20subhe\
-      ading%20in%20a%20new%20component)"
-  button:
-    label: "\n    Button\n  "
-    type: text
-    comment: >-
-      [A new test
-      page](https://moving-mule.cloudvent.net/a-new-test-page#:~:text=
-
-      %20%20%20%20Button
-
-      %20%20)
-  does-this-wipe-everything-in-the-translations-file:
-    label: Does this wipe everything in the translations file?
-    type: textarea
-    comment: "[Another new
-      page](https://moving-mule.cloudvent.net/another-new-page#:~:text=Does%20t\
-      his%20wipe%20everything%20in%20the%20translations%20file?)"
   hugo-rosey-demo-changed:
     label: Hugo Rosey Demo Changed
     type: textarea
@@ -154,13 +88,8 @@ _inputs:
   site-title:
     label: Hugo Rosey Demo
     type: text
-    comment: "[A new test
-      page](https://moving-mule.cloudvent.net/a-new-test-page#:~:text=Hugo%20Ro\
-      sey%20Demo) | [Another new
-      page](https://moving-mule.cloudvent.net/another-new-page#:~:text=Hugo%20R\
-      osey%20Demo) |
-      [Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Hugo%20Ro\
-      sey%20Demo)"
+    comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Hugo%\
+      20Rosey%20Demo)"
 Blog: Blog
 Contact: Kontakt
 Feature: Besonderheit
@@ -172,11 +101,6 @@ a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-se
   CloudCannon-GUI eingeben können. Zusätzliche Sprachen können in den
   Umgebungsvariablen in der Build-Konfiguration von CloudCannon festgelegt
   werden.
-a-heading: Eine Überschrift
-a-second-heading: Eine zweite Überschrift
-a-subheading-in-a-new-component: Eine Unterüberschrift in einer neuen Komponente
-button: Taste
-does-this-wipe-everything-in-the-translations-file: Wird dadurch alles in der Übersetzungsdatei gelöscht?
 hugo-rosey-demo-changed: Demo von Hugo Rosey geändert
 keep-what-you-need-delete-the-rest-changed: Behalten Sie, was Sie brauchen. Den Rest löschen. GEÄNDERT
 make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey:
