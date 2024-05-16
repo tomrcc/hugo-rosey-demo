@@ -31,38 +31,38 @@ _inputs:
   About:
     label: About
     type: text
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
-      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+    comment: "[A new test page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [Another new page](https://moving-mule.cloudvent.net/another-new-page/)
       | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Blog:
     label: Blog
     type: text
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
-      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+    comment: "[A new test page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [Another new page](https://moving-mule.cloudvent.net/another-new-page/)
       | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Contact:
     label: Contact
     type: text
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
-      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+    comment: "[A new test page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [Another new page](https://moving-mule.cloudvent.net/another-new-page/)
       | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Feature:
     label: Feature
     type: text
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
-      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+    comment: "[A new test page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [Another new page](https://moving-mule.cloudvent.net/another-new-page/)
       | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Home:
     label: Home
     type: text
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
-      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+    comment: "[A new test page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [Another new page](https://moving-mule.cloudvent.net/another-new-page/)
       | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Pricing:
     label: Pricing
     type: text
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
-      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+    comment: "[A new test page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [Another new page](https://moving-mule.cloudvent.net/another-new-page/)
       | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
     label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
@@ -74,23 +74,23 @@ _inputs:
   a-heading:
     label: A heading
     type: text
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)"
+    comment: "[A new test page](https://moving-mule.cloudvent.net/a-new-test-page/)"
   a-second-heading:
     label: A second heading
     type: text
-    comment: "[another-new-page](https://moving-mule.cloudvent.net/another-new-page/)"
+    comment: "[Another new page](https://moving-mule.cloudvent.net/another-new-page/)"
   a-subheading-in-a-new-component:
     label: A subheading in a new component
     type: textarea
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)"
+    comment: "[A new test page](https://moving-mule.cloudvent.net/a-new-test-page/)"
   button:
     label: "\n    Button\n  "
     type: text
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)"
+    comment: "[A new test page](https://moving-mule.cloudvent.net/a-new-test-page/)"
   does-this-wipe-everything-in-the-translations-file:
     label: Does this wipe everything in the translations file?
     type: textarea
-    comment: "[another-new-page](https://moving-mule.cloudvent.net/another-new-page/)"
+    comment: "[Another new page](https://moving-mule.cloudvent.net/another-new-page/)"
   hugo-rosey-demo:
     label: Hugo Rosey Demo
     type: text
@@ -112,8 +112,8 @@ _inputs:
   site-title:
     label: Hugo Rosey Demo
     type: text
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
-      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+    comment: "[A new test page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [Another new page](https://moving-mule.cloudvent.net/another-new-page/)
       | [Homepage](https://moving-mule.cloudvent.net/index.html)"
 Blog: Translated
 Contact: Contactorino
