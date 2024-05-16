@@ -105,7 +105,7 @@ async function main(locale) {
     }
 
     // Add each entry to our _inputs obj - no need to preserve these between translations
-    const inputType = label.length < 20 ? 'text' : 'textarea';
+    const inputType = originalPhrase.length < 20 ? 'text' : 'textarea';
 
     cleanedOutputFileData['_inputs'][inputKey] = {
       label: originalPhrase,
@@ -123,14 +123,15 @@ async function main(locale) {
       cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs;
 
     if (cleanedOutputFileData[inputKey].length > 0) {
-      console.log('translated', cleanedOutputFileData[inputKey]);
+      // console.log('translated', inputKey, cleanedOutputFileData[inputKey]);
       translatedPageGroup.push(inputKey);
     } else {
-      console.log('untranslated', cleanedOutputFileData[inputKey]);
+      // console.log('untranslated', inputKey, cleanedOutputFileData[inputKey]);
       unTranslatedPageGroup.push(inputKey);
     }
   }
 
+  console.log(cleanedOutputFileData);
   await fs.writeFileSync(
     translationFilePath,
     YAML.stringify(cleanedOutputFileData),
