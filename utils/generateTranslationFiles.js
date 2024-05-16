@@ -105,12 +105,18 @@ async function main(locale) {
     // else add it to translated
     const unTranslatedPageGroup =
       cleanedOutputFileData['_inputs']['$'].options.groups[0].inputs;
-    const TranslatedPageGroup =
+
+    const translatedPageGroup =
       cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs;
+
+    // console.log(cleanedOutputFileData[inputKey].length > 0);
+
     if (cleanedOutputFileData[inputKey].length > 0) {
-      unTranslatedPageGroup.push(inputKey);
+      console.log('translated', inputKey);
+      translatedPageGroup.push(inputKey);
     } else {
-      TranslatedPageGroup.push(inputKey);
+      console.log('untranslated', inputKey);
+      unTranslatedPageGroup.push(inputKey);
     }
   }
 
