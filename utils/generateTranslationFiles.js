@@ -45,14 +45,19 @@ async function main(locale) {
       }
     });
 
-    // Add a link for each page the translation appears on, but not tags and categories pages
+    // If entry doesn't exist in our output file, add it
+    if (!cleanedOutputFileData[inputKey]) {
+      cleanedOutputFileData[inputKey] = '';
+    }
+
+    // Find the pages the translation appears on, but not tags and categories pages
     const translationPages = Object.keys(inputTranslationObj.pages).filter(
       (page) => {
         return page !== 'tags/index.html' && page !== 'categories/index.html';
       }
     );
 
-    // Get the locations of where a translation is mentioned
+    // Write the string to link to the location
     const translationLocations = translationPages.map((page) => {
       const pageName =
         page === 'index.html' ? 'Homepage' : page.replace('/index.html', '');
@@ -67,16 +72,48 @@ async function main(locale) {
     // Add each entry to our _inputs obj - no need to preserve these between translations
     const label = inputTranslationObj.original;
     const inputType = label.length < 20 ? 'text' : 'textarea';
-    console.log(inputType);
+
     cleanedOutputFileData['_inputs'][inputKey] = {
       label: label,
       type: inputType,
       comment: translationLocations.join(' | '),
     };
 
-    // If entry doesn't exist in our output file, add it
-    if (!cleanedOutputFileData[inputKey]) {
-      cleanedOutputFileData[inputKey] = '';
+    // Create the page input object
+    if (!cleanedOutputFileData['_inputs']['$']) {
+      cleanedOutputFileData['_inputs']['$'] = {
+        type: 'object',
+        options: {
+          place_groups_below: false,
+          groups: [
+            {
+              heading: 'Untranslated',
+              comment: 'Content to be translated',
+              inputs: [],
+            },
+            {
+              heading: 'Translated',
+              comment: 'Content already translated',
+              inputs: [],
+            },
+          ],
+        },
+      };
+    }
+    // Add each entry to page object group depending on whether they are translated or not
+    // if translation key is an empty string, or is not yet in the output file add it to untranslated
+    // else add it to translated
+    if (
+      !cleanedOutputFileData[inputKey] ||
+      cleanedOutputFileData[inputKey] === ''
+    ) {
+      cleanedOutputFileData['_inputs']['$'].options.groups[0].inputs.push(
+        inputKey
+      );
+    } else {
+      cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs.push(
+        inputKey
+      );
     }
   }
 
