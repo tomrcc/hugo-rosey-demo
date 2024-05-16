@@ -7,7 +7,8 @@ _inputs:
       groups:
         - heading: Untranslated
           comment: Content to be translated
-          inputs: []
+          inputs:
+            - hugo-rosey-demo
         - heading: Translated
           comment: Content already translated
           inputs:
@@ -18,7 +19,6 @@ _inputs:
             - Home
             - Pricing
             - a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration
-            - hugo-rosey-demo-changed
             - keep-what-you-need-delete-the-rest-changed
             - make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey
             - read-more
@@ -59,11 +59,11 @@ _inputs:
       lations%20via%20the%20CloudCannon%20GUI.%20Additional%20languages%20can%2\
       0be%20set%20in%20the%20environment%20variables%20in%20CloudCannon’s%20bui\
       ld%20configuration.)"
-  hugo-rosey-demo-changed:
-    label: Hugo Rosey Demo Changed
-    type: textarea
+  hugo-rosey-demo:
+    label: Hugo Rosey Demo
+    type: text
     comment: "[Homepage](https://moving-mule.cloudvent.net/index.html#:~:text=Hugo%\
-      20Rosey%20Demo%20Changed)"
+      20Rosey%20Demo)"
   keep-what-you-need-delete-the-rest-changed:
     label: Keep what you need. Delete the rest. CHANGED
     type: textarea
@@ -100,7 +100,7 @@ a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-se
   tiene una configuración adicional para que podamos ingresar traducciones a
   través de la GUI de CloudCannon. Se pueden configurar idiomas adicionales en
   las variables de entorno en la configuración de compilación de CloudCannon.
-hugo-rosey-demo-changed: Demostración de Hugo Rosey cambiada
+hugo-rosey-demo: ""
 keep-what-you-need-delete-the-rest-changed: Conserva lo que necesitas. Elimina el resto. CAMBIÓ
 make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey: >
   Haga su propia copia de este repositorio. Consúltelo o úselo como plantilla
