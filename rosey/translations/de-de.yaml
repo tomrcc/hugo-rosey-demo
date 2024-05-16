@@ -1,4 +1,4 @@
-About: ""
+About: Translated yo
 _inputs:
   About:
     label: About
@@ -87,11 +87,11 @@ _inputs:
     comment: "[a-new-test-page](https://moving-mule.cloudvent.neta-new-test-page/) |
       [another-new-page](https://moving-mule.cloudvent.netanother-new-page/) |
       [Homepage](https://moving-mule.cloudvent.netindex.html)"
-Blog: ""
-Contact: ""
-Feature: ""
-Home: ""
-Pricing: ""
+Blog: Translated
+Contact: Contactorino
+Feature: Feat ft.
+Home: Where the heart is
+Pricing: $$$$
 a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
   Eine Demonstration, wie Hugo und Rosey in CloudCannon arbeiten. Diese Site
   verfügt über eine zusätzliche Einrichtung, damit wir Übersetzungen über die
