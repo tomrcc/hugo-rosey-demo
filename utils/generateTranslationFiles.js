@@ -63,7 +63,7 @@ async function main(locale) {
       cleanedOutputFileData['_inputs'][inputKey] = {
         label: inputTranslationObj.original,
         type: 'textarea',
-        comment: translationLocations.join(','),
+        comment: translationLocations.join(' | '),
       };
     }
 
