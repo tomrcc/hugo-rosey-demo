@@ -4,6 +4,7 @@ const slugify = require('slugify');
 
 const inputFilePath = './rosey/base.json';
 const translationFilesDirPath = './rosey/translations';
+const baseURL = process.env.BASEURL;
 let locales = process.env.LOCALES.toLowerCase().split(',');
 // let locales = ['es-es'];
 let outputFileData = {};
@@ -42,10 +43,14 @@ async function main(locale) {
     const translationLocations = translationPages.map((page) => {
       // TODO: Add dynamic collection to editor link
       // TODO: Maybe add config file that you can set content/visual editor or live site preview for translation link
-      return `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F${page
-        .replace('index', '_index')
-        .replace('/', '%2F')
-        .replace('.html', '.md')}&collection=pages)`;
+      // return `[${page}](https://app.cloudcannon.com/41142/editor#sites/125080/collections/pages/:/edit?editor=visual&url=%2F&path=%2Fcontent%2F${page
+      //   .replace('index', '_index')
+      //   .replace('/', '%2F')
+      //   .replace('.html', '.md')}&collection=pages)`;
+      const pageName =
+        page === 'index.html' ? 'Homepage' : page.replace('/index.html', '');
+      const pagePath = page.replace('/index.html', '/');
+      return `[${pageName}](${baseURL}/${pagePath})`;
     });
 
     // If no inputs obj exists, create one
