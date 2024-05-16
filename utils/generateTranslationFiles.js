@@ -66,9 +66,12 @@ async function main(locale) {
     // Write the string to link to the location
     const translationLocations = translationPages.map((page) => {
       const pageName =
-        page === 'index.html' ? 'Homepage' : page.replace('/index.html', '');
+        page === 'index.html'
+          ? 'Homepage'
+          : page.replace('/index.html', '').replaceAll('-', ' ');
+      const pageNameCapitalised = pageName[0].toUpperCase() + pageName.slice(1);
       const pagePath = page.replace('/index.html', '/');
-      return `[${pageName}](${baseURL}${pagePath})`;
+      return `[${pageNameCapitalised}](${baseURL}${pagePath})`;
     });
 
     // Create the inputs obj if there is none
