@@ -121,8 +121,8 @@
       },
       "total": 1
     },
-    "hugo-rosey-demo": {
-      "original": "Hugo Rosey Demo",
+    "hugo-rosey-demo-changed": {
+      "original": "Hugo Rosey Demo Changed",
       "value": null,
       "pages": {
         "index.html": 1
