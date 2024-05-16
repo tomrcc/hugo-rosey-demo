@@ -1,6 +1,3 @@
-// TODO: Figure out why highlight doesn't work in markdown links?
-// TODO: Why does changing
-
 const fs = require('file-system');
 const YAML = require('yaml');
 const slugify = require('slugify');

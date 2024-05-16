@@ -87,3 +87,13 @@ a-test-string: 'una cadena de prueba'
 an-empty-test-string: ''
 nice-little-fluffy-clouds-laying-around-in-the-sky-being-lazy-i-like-to-beat-the-brush-let's-make-some-happy-little-clouds-in-our-world-the-least-little-bit-can-do-so-much-let's-get-wild-today-trees-grow-however-makes-them-happy: ''
 ```
+
+- When a string changes at all the whole translated section is wiped, and we need to translate it again
+- We could add an 'all' page, and break the site down into individual pages to translate -
+  - Would need to worry about who wins if both are filled out
+    - If translations are filled out on one of the individual pages, as well as the 'all' page the more specific individual page should win (this lets us use the cascade nicely)
+  - Would be able to search on the all page, but also navigate the translations easy.
+- Needs to be tested with markdown and html content
+- Next version
+  - Integrate with an external service
+    - Have the result of the external service populate the translations input so editors can check and edit the auto translation
