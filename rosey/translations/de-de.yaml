@@ -2,39 +2,39 @@ _inputs:
   About:
     label: About
     type: textarea
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)\
-      ,[another-new-page](https://moving-mule.cloudvent.net/another-new-page/),\
-      [Homepage](https://moving-mule.cloudvent.net/index.html)"
+    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+      | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Blog:
     label: Blog
     type: textarea
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)\
-      ,[another-new-page](https://moving-mule.cloudvent.net/another-new-page/),\
-      [Homepage](https://moving-mule.cloudvent.net/index.html)"
+    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+      | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Contact:
     label: Contact
     type: textarea
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)\
-      ,[another-new-page](https://moving-mule.cloudvent.net/another-new-page/),\
-      [Homepage](https://moving-mule.cloudvent.net/index.html)"
+    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+      | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Feature:
     label: Feature
     type: textarea
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)\
-      ,[another-new-page](https://moving-mule.cloudvent.net/another-new-page/),\
-      [Homepage](https://moving-mule.cloudvent.net/index.html)"
+    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+      | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Home:
     label: Home
     type: textarea
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)\
-      ,[another-new-page](https://moving-mule.cloudvent.net/another-new-page/),\
-      [Homepage](https://moving-mule.cloudvent.net/index.html)"
+    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+      | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Pricing:
     label: Pricing
     type: textarea
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)\
-      ,[another-new-page](https://moving-mule.cloudvent.net/another-new-page/),\
-      [Homepage](https://moving-mule.cloudvent.net/index.html)"
+    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+      | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configuration:
     label: A demonstration of how Hugo and Rosey work in CloudCannon. This site has
       extra setup so that we can enter translations via the CloudCannon GUI.
@@ -83,9 +83,9 @@ _inputs:
   site-title:
     label: Hugo Rosey Demo
     type: textarea
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)\
-      ,[another-new-page](https://moving-mule.cloudvent.net/another-new-page/),\
-      [Homepage](https://moving-mule.cloudvent.net/index.html)"
+    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+      | [Homepage](https://moving-mule.cloudvent.net/index.html)"
 About: ""
 Blog: ""
 Contact: ""
