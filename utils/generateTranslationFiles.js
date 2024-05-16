@@ -37,7 +37,8 @@ async function main(locale) {
 
   for (const inputKey in inputFileData) {
     const inputTranslationObj = inputFileData[inputKey];
-    const originalPhrase = inputTranslationObj.original;
+    const originalPhrase = inputTranslationObj.original.trim();
+    console.log(originalPhrase);
 
     // Only add the key to our output data if it still exists in base.json
     // If entry no longer exists in base.json we don't add it
@@ -68,9 +69,10 @@ async function main(locale) {
           : page.replace('/index.html', '').replaceAll('-', ' ');
       const pageNameCapitalised = pageName[0].toUpperCase() + pageName.slice(1);
       const pagePath = page.replace('/index.html', '');
-      return `[${pageNameCapitalised}](${baseURL}${pagePath}#:~:text=${originalPhrase
-        .trim()
-        .replaceAll(' ', '%20')})`;
+      return `[${pageNameCapitalised}](${baseURL}${pagePath}#:~:text=${originalPhrase.replaceAll(
+        ' ',
+        '%20'
+      )})`;
     });
 
     // Create the inputs obj if there is none
@@ -104,7 +106,7 @@ async function main(locale) {
     const inputType = originalPhrase.length < 20 ? 'text' : 'textarea';
 
     cleanedOutputFileData['_inputs'][inputKey] = {
-      label: originalPhrase.trim(),
+      label: originalPhrase,
       type: inputType,
       comment: translationLocations.join(' | '),
     };
@@ -127,7 +129,7 @@ async function main(locale) {
     }
   }
 
-  console.log(cleanedOutputFileData);
+  // console.log(cleanedOutputFileData);
   await fs.writeFileSync(
     translationFilePath,
     YAML.stringify(cleanedOutputFileData),
