@@ -1,5 +1,6 @@
 // TODO: Group translated and untranslated text with object groups using the $ syntax in _inputs
 // TODO: If label is under 20 characters in length, make the input a text input instead of textarea
+// TODO: probably didn't update the inputs properly, because we only make them once unless they change
 
 const fs = require('file-system');
 const YAML = require('yaml');
@@ -59,21 +60,15 @@ async function main(locale) {
       return `[${pageName}](${baseURL}${pagePath})`;
     });
 
-    // If no inputs obj exists, create one
-    if (!cleanedOutputFileData['_inputs']) {
-      cleanedOutputFileData['_inputs'] = {};
-    }
-
-    // Add each entry to our _inputs obj if not there already
-    if (!cleanedOutputFileData['_inputs'][inputKey]) {
-      const label = inputTranslationObj.original;
-      const inputType = label > 20 ? 'textarea' : 'text';
-      cleanedOutputFileData['_inputs'][inputKey] = {
-        label: label,
-        type: inputType,
-        comment: translationLocations.join(' | '),
-      };
-    }
+    // Add each entry to our _inputs obj - no need to preserve these between translations
+    cleanedOutputFileData['_inputs'] = {};
+    const label = inputTranslationObj.original;
+    const inputType = label.length > 20 ? 'textarea' : 'text';
+    cleanedOutputFileData['_inputs'][inputKey] = {
+      label: label,
+      type: inputType,
+      comment: translationLocations.join(' | '),
+    };
 
     // If entry doesn't exist in our output file, add it
     if (!cleanedOutputFileData[inputKey]) {
