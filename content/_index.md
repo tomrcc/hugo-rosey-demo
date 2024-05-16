@@ -1,4 +1,5 @@
 ---
+_schema: default
 title: Home
 seo:
   page_description: >-
@@ -12,7 +13,7 @@ seo:
   no_index: false
 content_blocks:
   - _bookshop_name: hero
-    heading: Hugo Rosey Demo
+    heading: Hugo Rosey Demo Changed
     text: >-
       A demonstration of how Hugo and Rosey work in CloudCannon. This site has
       extra setup so that we can enter translations via the CloudCannon GUI.
@@ -25,7 +26,7 @@ content_blocks:
       button_text_color: '#ffffff'
       button_color: '#034ad8'
   - _bookshop_name: left-right
-    heading: Keep what you need. Delete the rest.
+    heading: Keep what you need. Delete the rest. CHANGED
     text: >-
       Make your own copy of this repository. Reference it or use it as a
       template to get up and running with translation workflows in CloudCannon

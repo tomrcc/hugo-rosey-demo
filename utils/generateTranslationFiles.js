@@ -1,6 +1,5 @@
-// TODO: Group translated and untranslated text with object groups using the $ syntax in _inputs
-// TODO: If label is under 20 characters in length, make the input a text input instead of textarea
-// TODO: probably didn't update the inputs properly, because we only make them once unless they change
+// TODO: Figure out why highlight doesn't work in markdown links?
+// TODO: Why does changing
 
 const fs = require('file-system');
 const YAML = require('yaml');
@@ -36,11 +35,12 @@ async function main(locale) {
     );
   } else {
     console.log(`${translationFilePath} does not exist, creating one now`);
-    fs.writeFileSync(translationFilePath, '_inputs: {}');
+    await fs.writeFileSync(translationFilePath, '_inputs: {}');
   }
 
   for (const inputKey in inputFileData) {
     const inputTranslationObj = inputFileData[inputKey];
+    const originalPhrase = inputTranslationObj.original;
 
     // Only add the key to our output data if it still exists in base.json
     // If entry no longer exists in base.json we don't add it
@@ -66,9 +66,15 @@ async function main(locale) {
     // Write the string to link to the location
     const translationLocations = translationPages.map((page) => {
       const pageName =
-        page === 'index.html' ? 'Homepage' : page.replace('/index.html', '');
-      const pagePath = page.replace('/index.html', '/');
-      return `[${pageName}](${baseURL}${pagePath})`;
+        page === 'index.html'
+          ? 'Homepage'
+          : page.replace('/index.html', '').replaceAll('-', ' ');
+      const pageNameCapitalised = pageName[0].toUpperCase() + pageName.slice(1);
+      const pagePath = page.replace('/index.html', '');
+      return `[${pageNameCapitalised}](${baseURL}${pagePath}#:~:text=${originalPhrase.replaceAll(
+        ' ',
+        '%20'
+      )})`;
     });
 
     // Create the inputs obj if there is none
@@ -99,11 +105,10 @@ async function main(locale) {
     }
 
     // Add each entry to our _inputs obj - no need to preserve these between translations
-    const label = inputTranslationObj.original;
-    const inputType = label.length < 20 ? 'text' : 'textarea';
+    const inputType = originalPhrase.length < 20 ? 'text' : 'textarea';
 
     cleanedOutputFileData['_inputs'][inputKey] = {
-      label: label,
+      label: originalPhrase,
       type: inputType,
       comment: translationLocations.join(' | '),
     };
@@ -118,15 +123,16 @@ async function main(locale) {
       cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs;
 
     if (cleanedOutputFileData[inputKey].length > 0) {
-      console.log('translated', cleanedOutputFileData[inputKey]);
+      // console.log('translated', inputKey, cleanedOutputFileData[inputKey]);
       translatedPageGroup.push(inputKey);
     } else {
-      console.log('untranslated', cleanedOutputFileData[inputKey]);
+      // console.log('untranslated', inputKey, cleanedOutputFileData[inputKey]);
       unTranslatedPageGroup.push(inputKey);
     }
   }
 
-  fs.writeFileSync(
+  console.log(cleanedOutputFileData);
+  await fs.writeFileSync(
     translationFilePath,
     YAML.stringify(cleanedOutputFileData),
     (err) => {
