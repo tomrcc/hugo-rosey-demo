@@ -1,11 +1,5 @@
 About: ""
 _inputs:
-  About:
-    label: About
-    type: text
-    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
-      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
-      | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   $:
     type: object
     options:
@@ -34,6 +28,12 @@ _inputs:
         - heading: Translated
           comment: Content already translated
           inputs: []
+  About:
+    label: About
+    type: text
+    comment: "[a-new-test-page](https://moving-mule.cloudvent.net/a-new-test-page/)
+      | [another-new-page](https://moving-mule.cloudvent.net/another-new-page/)
+      | [Homepage](https://moving-mule.cloudvent.net/index.html)"
   Blog:
     label: Blog
     type: text
