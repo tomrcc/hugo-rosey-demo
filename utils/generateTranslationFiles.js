@@ -9,25 +9,31 @@ const slugify = require('slugify');
 const inputFilePath = './rosey/base.json';
 const translationFilesDirPath = './rosey/translations';
 const baseURL = process.env.BASEURL || 'http://localhost:1313/';
-let locales = process.env.LOCALES?.toLowerCase().split(',') || ['es-es'];
-let outputFileData = {};
-let inputFileData = {};
-let cleanedOutputFileData = {};
+let locales = process.env.LOCALES?.toLowerCase().split(',') || [
+  'es-es',
+  'de-de',
+  'fr-fr',
+];
 
 async function main(locale) {
   // Find the translation file path
   const translationFilePath = translationFilesDirPath + '/' + locale + '.yaml';
+  let outputFileData = {};
+  let inputFileData = {};
+  let cleanedOutputFileData = {};
 
   // Get the Rosey generated data
   if (fs.existsSync(inputFilePath)) {
-    inputFileData = JSON.parse(fs.readFileSync(inputFilePath)).keys;
+    inputFileData = await JSON.parse(fs.readFileSync(inputFilePath)).keys;
   } else {
     console.log('rosey/base.json does not exist');
   }
 
   // Get our old translations file
   if (fs.existsSync(translationFilePath)) {
-    outputFileData = YAML.parse(fs.readFileSync(translationFilePath, 'utf8'));
+    outputFileData = await YAML.parse(
+      fs.readFileSync(translationFilePath, 'utf8')
+    );
   } else {
     console.log(`${translationFilePath} does not exist, creating one now`);
     fs.writeFileSync(translationFilePath, '_inputs: {}');
@@ -45,14 +51,19 @@ async function main(locale) {
       }
     });
 
-    // Add a link for each page the translation appears on, but not tags and categories pages
+    // If entry doesn't exist in our output file, add it
+    if (!cleanedOutputFileData[inputKey]) {
+      cleanedOutputFileData[inputKey] = '';
+    }
+
+    // Find the pages the translation appears on, but not tags and categories pages
     const translationPages = Object.keys(inputTranslationObj.pages).filter(
       (page) => {
         return page !== 'tags/index.html' && page !== 'categories/index.html';
       }
     );
 
-    // Get the locations of where a translation is mentioned
+    // Write the string to link to the location
     const translationLocations = translationPages.map((page) => {
       const pageName =
         page === 'index.html' ? 'Homepage' : page.replace('/index.html', '');
@@ -64,23 +75,58 @@ async function main(locale) {
     if (!cleanedOutputFileData['_inputs']) {
       cleanedOutputFileData['_inputs'] = {};
     }
+
+    // Create the page input object
+    if (!cleanedOutputFileData['_inputs']['$']) {
+      cleanedOutputFileData['_inputs']['$'] = {
+        type: 'object',
+        options: {
+          place_groups_below: false,
+          groups: [
+            {
+              heading: 'Untranslated',
+              comment: 'Content to be translated',
+              inputs: [],
+            },
+            {
+              heading: 'Translated',
+              comment: 'Content already translated',
+              inputs: [],
+            },
+          ],
+        },
+      };
+    }
+
     // Add each entry to our _inputs obj - no need to preserve these between translations
     const label = inputTranslationObj.original;
     const inputType = label.length < 20 ? 'text' : 'textarea';
-    console.log(inputType);
+
     cleanedOutputFileData['_inputs'][inputKey] = {
       label: label,
       type: inputType,
       comment: translationLocations.join(' | '),
     };
 
-    // If entry doesn't exist in our output file, add it
-    if (!cleanedOutputFileData[inputKey]) {
-      cleanedOutputFileData[inputKey] = '';
+    // Add each entry to page object group depending on whether they are translated or not
+    // if translation key is an empty string, or is not yet in the output file add it to untranslated
+    // else add it to translated
+    const unTranslatedPageGroup =
+      cleanedOutputFileData['_inputs']['$'].options.groups[0].inputs;
+
+    const translatedPageGroup =
+      cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs;
+
+    if (cleanedOutputFileData[inputKey].length > 0) {
+      console.log('translated', cleanedOutputFileData[inputKey]);
+      translatedPageGroup.push(inputKey);
+    } else {
+      console.log('untranslated', cleanedOutputFileData[inputKey]);
+      unTranslatedPageGroup.push(inputKey);
     }
   }
 
-  fs.writeFile(
+  fs.writeFileSync(
     translationFilePath,
     YAML.stringify(cleanedOutputFileData),
     (err) => {
